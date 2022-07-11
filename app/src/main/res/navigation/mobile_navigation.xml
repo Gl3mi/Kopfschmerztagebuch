@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_calendar">
+
+    <fragment
+        android:id="@+id/navigation_calendar"
+        android:name="at.htlkaindorf.kopfschmerztagebuch.ui.calendar.CalendarFragment"
+        android:label="@string/title_calendar"
+        tools:layout="@layout/fragment_calendar" />
+
+    <fragment
+        android:id="@+id/navigation_entry"
+        android:name="at.htlkaindorf.kopfschmerztagebuch.ui.entry.EntryFragment"
+        android:label="@string/title_entry"
+        tools:layout="@layout/fragment_entry" />
+
+    <fragment
+        android:id="@+id/navigation_summary"
+        android:name="at.htlkaindorf.kopfschmerztagebuch.ui.summary.SummaryFragment"
+        android:label="@string/title_summary"
+        tools:layout="@layout/fragment_summary" />
+
+    <fragment
+        android:id="@+id/navigation_info"
+        android:name="at.htlkaindorf.kopfschmerztagebuch.ui.info.InfoFragment"
+        android:label="@string/title_info"
+        tools:layout="@layout/fragment_info" />
+</navigation>

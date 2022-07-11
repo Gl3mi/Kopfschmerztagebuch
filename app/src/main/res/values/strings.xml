@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kopfschmerztagebuch</string>
+    <string name="title_calendar">KALENDER</string>
+    <string name="title_entry">HINZUFÜGEN</string>
+    <string name="title_summary">ÜBERSICHT</string>
+    <string name="title_info">INFO</string>
+</resources>
