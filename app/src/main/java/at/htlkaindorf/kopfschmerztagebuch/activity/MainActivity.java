@@ -1,4 +1,4 @@
-package at.htlkaindorf.kopfschmerztagebuch;
+package at.htlkaindorf.kopfschmerztagebuch.activity;
 
 import android.os.Bundle;
 
@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

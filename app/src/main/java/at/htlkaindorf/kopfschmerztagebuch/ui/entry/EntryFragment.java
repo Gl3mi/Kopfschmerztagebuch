@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,7 +18,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.google.gson.Gson;
 
-import at.htlkaindorf.kopfschmerztagebuch.EntryActivity;
+import at.htlkaindorf.kopfschmerztagebuch.activity.EntryActivity;
 import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 import at.htlkaindorf.kopfschmerztagebuch.ui.SharedViewModel;
@@ -37,10 +38,9 @@ public class EntryFragment extends Fragment {
         sharedPreferences = requireContext().getSharedPreferences(MYPREFS, Context.MODE_PRIVATE);
         @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.clear().apply();
 
         textView = v.findViewById(R.id.text_entry);
-        Button bt = v.findViewById(R.id.add);
+        ImageButton bt = v.findViewById(R.id.add);
 
         bt.setOnClickListener(view -> {
             Intent intent = new Intent(getActivity(), EntryActivity.class);
