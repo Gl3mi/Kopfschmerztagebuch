@@ -21,4 +21,15 @@ public class Entry {
     private String[] attendantSymptoms;
     private String comment;
 
+    public Entry(String kindOfPain, String comment) {
+        this.kindOfPain = kindOfPain;
+        this.painArea = null;
+        this.intensity = 0;
+        this.from = null;
+        this.to = null;
+        this.date = null;
+        this.medics = null;
+        this.attendantSymptoms = null;
+        this.comment = comment;
+    }
 }
