@@ -9,15 +9,23 @@ import java.util.List;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 
 public class SharedViewModel extends ViewModel {
-    private final MutableLiveData<List<Entry>> entry = new MutableLiveData<>();
-    private final List<Entry> list = new ArrayList<>();
+    private List<Entry> list = new ArrayList<>();
+    private MutableLiveData<List<Entry>> liveData = new MutableLiveData<>();
 
-    public MutableLiveData<List<Entry>> getEntry() {
-        return this.entry;
+    public List<Entry> getLiveData() {
+        return liveData.getValue();
     }
 
-    public void setEntry(Entry entry){
+    public void setLiveData(Entry liveData) {
+        list.add(liveData);
+        this.liveData.setValue(list);
+    }
+
+    public void addEntry(Entry entry){
         list.add(entry);
-        this.entry.setValue(list);
+    }
+
+    public List<Entry> getList() {
+        return list;
     }
 }

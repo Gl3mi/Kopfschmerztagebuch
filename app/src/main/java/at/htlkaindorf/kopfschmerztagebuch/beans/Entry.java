@@ -2,6 +2,7 @@ package at.htlkaindorf.kopfschmerztagebuch.beans;
 
 import java.sql.Time;
 import java.time.LocalDate;
+import java.util.Arrays;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -31,5 +32,20 @@ public class Entry {
         this.medics = null;
         this.attendantSymptoms = null;
         this.comment = comment;
+    }
+
+    @Override
+    public String toString() {
+        return "Entry{" +
+                "kindOfPain='" + kindOfPain + '\'' +
+                ", painArea=" + Arrays.toString(painArea) +
+                ", intensity=" + intensity +
+                ", from=" + from +
+                ", to=" + to +
+                ", date=" + date +
+                ", medics='" + medics + '\'' +
+                ", attendantSymptoms=" + Arrays.toString(attendantSymptoms) +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }
