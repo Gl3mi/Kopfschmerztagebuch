@@ -4,12 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -24,7 +20,7 @@ import java.util.Collections;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 import at.htlkaindorf.kopfschmerztagebuch.ui.SharedViewModel;
 
-public class EntryActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class EntryActivity extends AppCompatActivity {
     private EditText t1;
     private EditText t2;
     private static final String MYPREFS = "myprefs";
@@ -38,13 +34,6 @@ public class EntryActivity extends AppCompatActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry);
-
-        Spinner spinner = findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter
-                .createFromResource(this, R.array.test, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
 
         SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
 
@@ -118,15 +107,5 @@ public class EntryActivity extends AppCompatActivity implements AdapterView.OnIt
 
             super.onBackPressed();
         });
-    }
-
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        textView.setText(String.valueOf(parent.getItemAtPosition(position)));
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> parent) {
-
     }
 }

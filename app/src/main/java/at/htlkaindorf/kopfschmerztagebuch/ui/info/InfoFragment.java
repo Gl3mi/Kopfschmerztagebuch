@@ -11,16 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.databinding.FragmentInfoBinding;
 
 public class InfoFragment extends Fragment {
     private FragmentInfoBinding binding;
-    private Button migraineBtn;
-    private Button tensionBtn;
-    private Button clusterBtn;
-    private Button sinusBtn;
-    private Button infoBtn;
 
     private TextView migraineT;
     private TextView tensionT;
@@ -30,11 +24,16 @@ public class InfoFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        InfoViewModel infoViewModel =
-                new ViewModelProvider(this).get(InfoViewModel.class);
+
         binding = FragmentInfoBinding.inflate(inflater, container, false);
 
-        migraineBtn = binding.migraineHeader;
+        migraineT = binding.migraineTf;
+        tensionT = binding.tensionTf;
+        clusterT = binding.clusterTf;
+        sinusT = binding.sinusTf;
+        infoT = binding.moreInfoLinks;
+
+        Button migraineBtn = binding.migraineHeader;
         migraineBtn.setOnClickListener(view -> {
             if (migraineT.getVisibility() != View.VISIBLE){
                 migraineT.setVisibility(View.VISIBLE);
@@ -43,7 +42,7 @@ public class InfoFragment extends Fragment {
             }
         });
 
-        tensionBtn = binding.tensionHeader;
+        Button tensionBtn = binding.tensionHeader;
         tensionBtn.setOnClickListener(view -> {
             if (tensionT.getVisibility() != View.VISIBLE){
                 tensionT.setVisibility(View.VISIBLE);
@@ -52,7 +51,7 @@ public class InfoFragment extends Fragment {
             }
         });
 
-        clusterBtn = binding.clusterHeader;
+        Button clusterBtn = binding.clusterHeader;
         clusterBtn.setOnClickListener(view -> {
             if (clusterT.getVisibility() != View.VISIBLE){
                 clusterT.setVisibility(View.VISIBLE);
@@ -61,7 +60,7 @@ public class InfoFragment extends Fragment {
             }
         });
 
-        sinusBtn = binding.sinusHeader;
+        Button sinusBtn = binding.sinusHeader;
         sinusBtn.setOnClickListener(view -> {
             if (sinusT.getVisibility() != View.VISIBLE){
                 sinusT.setVisibility(View.VISIBLE);
@@ -70,7 +69,7 @@ public class InfoFragment extends Fragment {
             }
         });
 
-        infoBtn = binding.moreInfoHeader;
+        Button infoBtn = binding.moreInfoHeader;
         infoBtn.setOnClickListener(view -> {
             if (infoT.getVisibility() != View.VISIBLE){
                 infoT.setVisibility(View.VISIBLE);
@@ -79,17 +78,7 @@ public class InfoFragment extends Fragment {
             }
         });
 
-        migraineT = binding.migraineTf;
-        tensionT = binding.tensionTf;
-        clusterT = binding.clusterTf;
-        sinusT = binding.sinusTf;
-        infoT = binding.moreInfoLinks;
-
-        View root = binding.getRoot();
-
-        //final TextView textView = binding.textView2;
-        //infoViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
-        return root;
+        return binding.getRoot();
     }
 
     @Override
