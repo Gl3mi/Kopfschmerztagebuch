@@ -1,4 +1,4 @@
-package at.htlkaindorf.kopfschmerztagebuch;
+package at.htlkaindorf.kopfschmerztagebuch.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -17,6 +17,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 import at.htlkaindorf.kopfschmerztagebuch.ui.SharedViewModel;
 
@@ -24,6 +25,7 @@ public class EntryActivity extends AppCompatActivity {
     private EditText t1;
     private EditText t2;
     private static final String MYPREFS = "myprefs";
+
     TextView textView;
     boolean[] selectedSymptom;
     ArrayList<Integer> langList = new ArrayList<>();
