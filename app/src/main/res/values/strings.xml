@@ -5,4 +5,24 @@
     <string name="title_summary">ÜBERSICHT</string>
     <string name="title_info">INFO</string>
     <string name="entry">EINTRAG</string>
+    <string name="more_info">MORE INFORMATIONS</string>
+    <string name="migraene">Migräne</string>
+    <string name="spannung">Spannungskopfschmerzen</string>
+    <string name="cluster">Cluster-Kopfschmerzen</string>
+    <string name="sinus">Sinusitis-Kopfschmerzen</string>
+    <string name="migraene_text">Migräne ist eine Art der Kopfschmerzen die nicht so häufig wie Spannungskopfschmerzen auftritt. Hierbei haben Frauen, oft aufgrund der Menstruation, häufiger Migräne als Männer. Man ist durch sie sehr oft stärker  eingeschränkt als bei Spannungskopfschmerzen, da eine Migräne deutlich stärker ist.
+        Die Schmerzen sind hierbei oft auf einer Seite des Kopfes und geben ein pulsierendes, pochendes oder hämmerndes Gefühl ab. Oft steht Migräne mit Übelkeit und schwindelerregenden Gefühlen in Verbindung.
+        Bevor die eigentliche Migräne einsetzt nehmen manche Menschen eine sogenannte “Aura” wahr. Dieser Begriff beschreibt eine leicht verschwommene oder verwackelte Sicht oder Lichtblitze oder eigenartige Formen. Diese verschwindet innerhalb einer Stunde folgenlos wieder.
+        Kopfschmerzen werden als Migräne eingestuft, wenn typische Merkmale mehr als fünfmal auftreten.\n
+        \n
+        Eine Migräne kann in seltenen Fällen auch chronisch werden. Das ist der Fall, wenn über einen Zeitraum von drei Monaten, an mindestens 15 Tagen pro Monat Beschwerden auftreten.
+        Bei einer Migräne gibt es keine genau bestimmten Ursachen. Eine Theorie besagt, dass sich dabei Blutgefäße im Gehirn entzünden. Es ist auch wichtig wie das Gehirn Schmerzsignale verarbeitet. Zum Beispiel kann Nervosität oder gewisse Anspannung die Schmerzen verstärken oder dazu führen, dass sie auftreten. Eine Migräne kann aber auch einsetzen wenn der Stress nachlässt.
+        Unregelmäßige Schlaf- und Essenszeiten können die Anfallswahrscheinlichkeit erhöhen.\n
+        \n
+        Hilfreich gegen eine Migräne sind feste Gewohnheiten oder Verhaltensweisen um Abweichungen und Unregelmäßigkeit als Auslöser zu vermeiden. Eine Dokumentation für eingenommen Medikamente und Nahrung würde kann auch helfen. So kann man leichter mögliche Auslöser identifizieren und zum Beispiel auf einen dieser, für eine Zeit verzichten
+        Manche Menschen verwenden auch Nahrungsergänzungsmittel pflanzliche Arzneimittel oder Entspannungsverfahren. Bei zu starken Anfällen kann man Medikamente verwenden oder sich einer Behandlung unterziehen. Dabei kann man Techniken lernen wie man mit verschiedene Situationen umgehen kann.
+    </string>
+    <string name="spannung_text">Sinusitis-Kopfschmerzen</string>
+    <string name="cluster_text">Sinusitis-Kopfschmerzen</string>
+    <string name="sinus_text">Sinusitis-Kopfschmerzen</string>
 </resources>
