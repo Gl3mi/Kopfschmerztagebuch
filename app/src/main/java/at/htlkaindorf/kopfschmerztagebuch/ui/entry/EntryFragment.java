@@ -65,8 +65,8 @@ public class EntryFragment extends Fragment {
         ImageButton bt = v.findViewById(R.id.add);
 
         bt.setOnClickListener(view -> {
-            relativeLayout = (RelativeLayout) v.findViewById(R.id.entry_item);
-            relativeLayout.setBackgroundResource(R.drawable.ic_launcher_background);
+            //relativeLayout = (RelativeLayout) v.findViewById(R.id.entry_item);
+            //relativeLayout.setBackgroundResource(R.drawable.ic_launcher_background);
 
             Intent intent = new Intent(getActivity(), EntryActivity.class);
             startActivity(intent);

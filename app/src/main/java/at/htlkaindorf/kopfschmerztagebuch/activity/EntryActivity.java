@@ -43,8 +43,6 @@ public class EntryActivity extends AppCompatActivity {
     private String chosenStart;
     private String chosenEnd;
 
-
-
     TextView textView;
     boolean[] selectedSymptom;
     ArrayList<Integer> langList = new ArrayList<>();
@@ -132,7 +130,7 @@ public class EntryActivity extends AppCompatActivity {
         @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
 
         bt.setOnClickListener(view -> {
-            Entry entry = new Entry(String.valueOf(t1.getText()), String.valueOf(t2.getText()));
+            Entry entry = new Entry(String.valueOf(t1.getText()), String.valueOf(t2.getText()), true);
             String json = gson.toJson(entry);
             editor.putString("testi", json).apply();
             viewModel.setLiveData(entry);
