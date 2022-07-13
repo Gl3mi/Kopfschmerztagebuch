@@ -6,7 +6,7 @@
     <string name="title_info">INFO</string>
     <string name="entry">EINTRAG</string>
     <string name="symptoms">Begleitsymptome</string>
-    <string name="more_info">MORE INFORMATIONS</string>
+    <string name="more_info">MORE INFORMATION</string>
     <string name="migraene">Migräne</string>
     <string name="spannung">Spannungs-\nKopfschmerzen</string>
     <string name="cluster">Cluster-\nKopfschmerzen</string>
@@ -55,4 +55,18 @@
             - Reizungen der Nasennebenhöhlen vermeiden. Nicht selbst Rauchen und nicht Passivrauchen. Frische Luft und häufiges Lüften sind wichtig. Unreine Luft führt zu Schwellungen und kann zu Entzündungen führen.\n
         </string>
     <string name="links">https://www.dmkg.de/startseite \n https://schmerzklinik.de/2914/ \n https://www.gesundheitsinformation.de/ \n https://www.oeksg.at/</string>
+    <string name="art">Schmerzart</string>
+    <string name="bereich">Schmerzbereich</string>
+    <string name="intensitaet">Intensität</string>
+    <string name="von">Von</string>
+    <string name="bis">Bis</string>
+    <string name="datum">Datum</string>
+    <string name="medikamemente">Medikamente</string>
+    <string name="medikamente_dings">Dings</string>
+    <string name="begleit">Begleitsymptome</string>
+    <string name="anmerkung">Anmerkung</string>
+    <string name="jan_01_2022">JAN 01 2022</string>
+    <string name="auswaehlen">Auswählen</string>
+    <string name="anmerkung_Hint">Anmerkung</string>
+    <string name="_01_00">01:00</string>
 </resources>
