@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".ui.info.InfoFragment"
     android:theme="@style/Theme.MaterialComponents.NoActionBar">
@@ -29,10 +30,11 @@
                     android:id="@+id/migraine_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#2196F3"
                     android:text="@string/migraene"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    app:backgroundTint="@color/blue"
+                    android:background="@drawable/rounded_corners"
+                    android:textColor="@color/white"
                     android:textSize="50sp" />
 
                 <TextView
@@ -43,7 +45,7 @@
                     android:layout_marginTop="10dp"
                     android:padding="30dp"
                     android:text="@string/migraene_text"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="17sp"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
@@ -55,10 +57,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:backgroundTint="#2196F3"
+                    app:backgroundTint="@color/blue"
+                    android:background="@drawable/rounded_corners"
                     android:text="@string/spannung"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
@@ -68,7 +71,7 @@
                     android:layout_marginTop="10dp"
                     android:padding="30dp"
                     android:text="@string/spannung_text"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="17sp"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
@@ -79,10 +82,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:backgroundTint="#2196F3"
+                    app:backgroundTint="@color/blue"
+                    android:background="@drawable/rounded_corners"
                     android:text="@string/cluster"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
@@ -92,7 +96,7 @@
                     android:layout_marginTop="10dp"
                     android:padding="30dp"
                     android:text="@string/cluster_text"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="17sp"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
@@ -103,10 +107,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:backgroundTint="#2196F3"
+                    app:backgroundTint="@color/blue"
+                    android:background="@drawable/rounded_corners"
                     android:text="@string/sinus"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:textSize="30sp" />
 
                 <TextView
@@ -116,7 +121,7 @@
                     android:layout_marginTop="10dp"
                     android:padding="30dp"
                     android:text="@string/sinus_text"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/black"
                     android:textSize="17sp"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
@@ -128,7 +133,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="20dp"
-                    android:backgroundTint="#3F51B5"
+                    app:backgroundTint="#3F51B5"
+                    android:background="@drawable/rounded_corners"
                     android:text="@string/more_info"
                     android:textAlignment="center"
                     android:textColor="@color/white"
@@ -143,7 +149,7 @@
                     android:linksClickable="true"
                     android:text="@string/links"
                     android:textAlignment="center"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@color/white"
                     android:layout_marginTop="10dp"
                     android:textColorLink="#008EFF"
                     android:textSize="15sp"

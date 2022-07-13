@@ -21,8 +21,9 @@ public class Entry {
     private String medics;
     private String[] attendantSymptoms;
     private String comment;
+    private boolean checkMedic;
 
-    public Entry(String kindOfPain, String comment) {
+    public Entry(String kindOfPain, String comment, boolean checkMedic) {
         this.kindOfPain = kindOfPain;
         this.painArea = null;
         this.intensity = 0;
@@ -31,6 +32,87 @@ public class Entry {
         this.date = null;
         this.medics = null;
         this.attendantSymptoms = null;
+        this.comment = comment;
+        this.checkMedic = checkMedic;
+    }
+
+    public boolean getCheckMedic() {
+        return checkMedic;
+    }
+
+    public void setCheckMedic(boolean checkMedic) {
+        this.checkMedic = checkMedic;
+    }
+
+    public String getKindOfPain() {
+        return kindOfPain;
+    }
+
+    public void setKindOfPain(String kindOfPain) {
+        this.kindOfPain = kindOfPain;
+    }
+
+    public String[] getPainArea() {
+        return painArea;
+    }
+
+    public void setPainArea(String[] painArea) {
+        this.painArea = painArea;
+    }
+
+    public int getIntensity() {
+        return intensity;
+    }
+
+    public void setIntensity(int intensity) {
+        this.intensity = intensity;
+    }
+
+    public Time getFrom() {
+        return from;
+    }
+
+    public void setFrom(Time from) {
+        this.from = from;
+    }
+
+    public Time getTo() {
+        return to;
+    }
+
+    public void setTo(Time to) {
+        this.to = to;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public String getMedics() {
+        return medics;
+    }
+
+    public void setMedics(String medics) {
+        this.medics = medics;
+    }
+
+    public String[] getAttendantSymptoms() {
+        return attendantSymptoms;
+    }
+
+    public void setAttendantSymptoms(String[] attendantSymptoms) {
+        this.attendantSymptoms = attendantSymptoms;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
         this.comment = comment;
     }
 

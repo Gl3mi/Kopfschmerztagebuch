@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_calendar"
-        android:icon="@drawable/ic_calendar_black_24dp"
+        android:icon="@drawable/ic_baseline_event_24"
         android:title="@string/title_calendar" />
 
     <item
         android:id="@+id/navigation_entry"
-        android:icon="@drawable/ic_entry_black_24dp"
+        android:icon="@drawable/ic_baseline_playlist_add_24"
         android:title="@string/title_entry" />
 
     <item
         android:id="@+id/navigation_summary"
-        android:icon="@drawable/ic_summary_black_24dp"
+        android:icon="@drawable/ic_baseline_equalizer_24"
         android:title="@string/title_summary" />
 
     <item
