@@ -3,21 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable-v24/baseline_equalizer_24.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable-v24/baseline_event_24.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable-v24/baseline_playlist_add_24.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable-v24/outline_equalizer_24.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable-v24/outline_event_24.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable-v24/outline_playlist_add_24.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/baseline_add_20.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/baseline_add_24.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/baseline_info_24.xml" value="0.2115" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/baseline_sentiment_satisfied_alt_24.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/entry.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/entry2.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/ic_baseline_add_20.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.193" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/ic_calendar_black_24dp.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2115" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2115" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.2115" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/ic_summary_black_24dp.xml" value="0.185" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/rating_empty.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/rating_fill.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/drawable/rounded_corners.xml" value="0.193" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout-v26/fragment_info.xml" value="0.20244565217391305" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/activity_entry.xml" value="0.25" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/entry_item.xml" value="0.1675213675213675" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/fragment_calendar.xml" value="0.19972826086956522" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/fragment_dashboard.xml" value="0.19972826086956522" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/fragment_entry.xml" value="0.19972826086956522" />
@@ -26,6 +37,7 @@
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/fragment_notifications.xml" value="0.19972826086956522" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/layout/fragment_summary.xml" value="0.19972826086956522" />
         <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/kleme/OneDrive - HTBLA Kaindorf/Diplomarbeit/Kopfschmerztagebuch/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.185" />
       </map>
     </option>
   </component>

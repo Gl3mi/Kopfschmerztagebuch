@@ -3,12 +3,11 @@ package at.htlkaindorf.kopfschmerztagebuch.activity;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -21,26 +20,38 @@ import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import at.htlkaindorf.kopfschmerztagebuch.bl.Operator;
 import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
+import at.htlkaindorf.kopfschmerztagebuch.bl.Session;
 import at.htlkaindorf.kopfschmerztagebuch.ui.SharedViewModel;
 
 public class EntryActivity extends AppCompatActivity {
-    private EditText t1;
-    private EditText t2;
-    private static final String MYPREFS = "myprefs";
-    private DatePickerDialog datePickerDialog;
-    private Button dateButton;
-    private String chosenDate;
+    private List<Entry> entries = new ArrayList<>();
+    private Session session;
 
-    private TimePickerDialog timePickerDialog;
-    private TimePickerDialog timePickerDialog2;
-    private Button timeButtonStart;
-    private Button timeButtonEnd;
-    private String chosenStart;
-    private String chosenEnd;
+    private TextView kindOfPain;
+    private TextView painArea;
+    private TextView symptoms;
+
+    private RadioGroup intensity;
+
+    private EditText medics;
+    private EditText comment;
+
+    private DatePickerDialog datePickerDialog;
+    private TimePickerDialog timePickerDialogFrom;
+    private TimePickerDialog timePickerDialogTo;
+
+    private Button dateButton;
+    private Button timeButtonFrom;
+    private Button timeButtonTo;
+
+    private String chosenDate;
+    private String chosenFrom;
+    private String chosenTo;
 
     boolean[] selectedSymptom;
     boolean[] selectedPainArea;
@@ -66,20 +77,31 @@ public class EntryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_entry);
 
+        session = new Session(this);
+
+        kindOfPain = findViewById(R.id.kindOfPain);
+        painArea = findViewById(R.id.painArea);
+        symptoms = findViewById(R.id.symptoms);
+
+        intensity = findViewById(R.id.intensity);
+
+        medics = findViewById(R.id.medics);
+        comment = findViewById(R.id.comment);
+
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
         dateButton.setText(getTodaysDate());
 
         initTimePicker();
-        String currentTime = Calendar.getInstance().get(Calendar.HOUR_OF_DAY) + " : " +
-                Calendar.getInstance().get(Calendar.MINUTE);
+        String currentTime = makeTimeString(Calendar.getInstance().get(Calendar.HOUR_OF_DAY),
+                Calendar.getInstance().get(Calendar.MINUTE));
 
-        timeButtonStart = findViewById(R.id.timePickerButtonV);
-        timeButtonStart.setText(currentTime);
-        timeButtonEnd = findViewById(R.id.timePickerButtonB);
-        timeButtonEnd.setText(currentTime);
+        timeButtonFrom = findViewById(R.id.timePickerButtonFrom);
+        timeButtonFrom.setText(currentTime);
+        timeButtonTo = findViewById(R.id.timePickerButtonTo);
+        timeButtonTo.setText(currentTime);
 
-        SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
+        //SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
 
         TextView symptoms = findViewById(R.id.symptoms);
         selectedSymptom = new boolean[symptomList.length];
@@ -99,20 +121,21 @@ public class EntryActivity extends AppCompatActivity {
 
 
         Gson gson = new Gson();
-        t1 = findViewById(R.id.medics);
-        t2 = findViewById(R.id.comment);
         Button bt = findViewById(R.id.addToList);
-        //textView = findViewById(R.id.test);
 
-        SharedPreferences sharedPreferences = getSharedPreferences(MYPREFS, Context.MODE_PRIVATE);
-        @SuppressLint("CommitPrefEdits") SharedPreferences.Editor editor = sharedPreferences.edit();
+        entries = session.getEntries("data");
 
         bt.setOnClickListener(view -> {
-            Entry entry = new Entry(String.valueOf(t1.getText()),
-                    String.valueOf(t2.getText()), true);
-            String json = gson.toJson(entry);
-            editor.putString("testi", json).apply();
-            viewModel.setLiveData(entry);
+            Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
+                    String.valueOf(painArea.getText()), 0, chosenFrom, chosenTo,
+                    chosenDate, String.valueOf(medics.getText()),
+                    String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), false);
+
+            entries.add(entry);
+
+            String json = gson.toJson(entries);
+            session.getEditor().putString("data", json).apply();
+            //viewModel.setLiveData(entry);
 
             super.onBackPressed();
         });
@@ -150,13 +173,13 @@ public class EntryActivity extends AppCompatActivity {
 
     private void initTimePicker() {
         TimePickerDialog.OnTimeSetListener timeSetListener = (timePicker, h, m) -> {
-            chosenStart = makeTimeString(h, m);
-            timeButtonStart.setText(chosenStart);
+            chosenFrom = makeTimeString(h, m);
+            timeButtonFrom.setText(chosenFrom);
         };
 
         TimePickerDialog.OnTimeSetListener timeSetListener2 = (timePicker, h, m) -> {
-            chosenEnd = makeTimeString(h, m);
-            timeButtonEnd.setText(chosenEnd);
+            chosenTo = makeTimeString(h, m);
+            timeButtonTo.setText(chosenTo);
         };
 
         Calendar cal = Calendar.getInstance();
@@ -165,23 +188,36 @@ public class EntryActivity extends AppCompatActivity {
 
         int style = android.app.AlertDialog.THEME_HOLO_LIGHT;
 
-        timePickerDialog = new TimePickerDialog(this, style,
+        timePickerDialogFrom = new TimePickerDialog(this, style,
                 timeSetListener, h, m, true);
 
-        timePickerDialog2 = new TimePickerDialog(this, style,
+        timePickerDialogTo = new TimePickerDialog(this, style,
                 timeSetListener2, h, m, true);
     }
 
     @NonNull
-    @Contract(pure = true)
     private String makeDateString(int day, int month, int year) {
-        return day + " " + getMonthFormat(month) + " " + year;
+        if (day < 10) {
+            return "0" + day + " " + getMonthFormat(month) + " " + year;
+        } else {
+            return day + " " + getMonthFormat(month) + " " + year;
+        }
+
     }
 
     @NonNull
     @Contract(pure = true)
     private String makeTimeString(int h, int m) {
-        return h + " : " + m;
+        String hour = "" + h;
+        String minute = "" + m;
+
+        if (h < 10) {
+            hour = "0" + h;
+        }
+        if (m < 10) {
+            minute = "0" + m;
+        }
+        return hour + " : " + minute;
     }
 
     @NonNull
@@ -189,45 +225,42 @@ public class EntryActivity extends AppCompatActivity {
     private String getMonthFormat(int month) {
         switch (month) {
             case 1:
-                return "JAN";
+                return "Jan";
             case 2:
-                return "FEB";
+                return "Feb";
             case 3:
-                return "MÄR";
+                return "Mär";
             case 4:
-                return "APR";
+                return "Apr";
             case 5:
-                return "MAI";
+                return "Mai";
             case 6:
-                return "JUN";
+                return "Jun";
             case 7:
-                return "JUL";
+                return "Jul";
             case 8:
-                return "AUG";
+                return "Aug";
             case 9:
-                return "SEP";
+                return "Sep";
             case 10:
-                return "OKT";
+                return "Okt";
             case 11:
-                return "NOV";
+                return "Nov";
             case 12:
-                return "DEZ";
+                return "Dez";
         }
-
-        //default should never happen"09:00
-        //12:50""0
-        return "JAN";
+        return "Jan";
     }
 
     public void openDatePicker(View view) {
         datePickerDialog.show();
     }
 
-    public void openTimePicker(View view) {
-        timePickerDialog.show();
+    public void openTimePickerFrom(View view) {
+        timePickerDialogFrom.show();
     }
 
-    public void openTimePicker2(View view) {
-        timePickerDialog2.show();
+    public void openTimePickerTo(View view) {
+        timePickerDialogTo.show();
     }
 }

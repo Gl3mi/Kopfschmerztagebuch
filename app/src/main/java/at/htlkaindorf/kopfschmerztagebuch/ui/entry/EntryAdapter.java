@@ -16,8 +16,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
@@ -26,6 +29,7 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryViewHolder> implemen
     private List<Entry> entries = new ArrayList<>();
     private final Context context;
     private GestureDetectorCompat gestureDetectorCompat;
+    private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd LLL yyyy", Locale.GERMAN);
 
     public EntryAdapter(Context context) {
         this.context = context;
@@ -50,11 +54,13 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryViewHolder> implemen
         return entryViewHolder;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull EntryViewHolder holder, int position) {
         Entry entry = entries.get(position);
+        LocalDate date = LocalDate.parse(entry.getDate(), formatter);
         holder.getName().setText(entry.getKindOfPain());
-        holder.getDate().setText(entry.getComment());
+        holder.getDate().setText(date.getDayOfMonth() + "." + date.getMonthValue());
 
         if (entry.getCheckMedic()) {
             Picasso.with(context)

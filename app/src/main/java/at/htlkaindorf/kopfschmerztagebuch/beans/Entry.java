@@ -1,37 +1,32 @@
 package at.htlkaindorf.kopfschmerztagebuch.beans;
 
-import java.sql.Time;
-import java.time.LocalDate;
-import java.util.Arrays;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import androidx.annotation.NonNull;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 public class Entry {
     private String kindOfPain;
-    private String[] painArea;
+    private String painArea;
     private int intensity;
-    private Time from;
-    private Time to;
-    private LocalDate date;
+    private String from;
+    private String to;
+    private String date;
     private String medics;
-    private String[] attendantSymptoms;
+    private String attendantSymptoms;
     private String comment;
     private boolean checkMedic;
 
-    public Entry(String kindOfPain, String comment, boolean checkMedic) {
+    public Entry(String kindOfPain, String painArea, int intensity, String from,
+                 String to, String date, String medics, String attendantSymptoms,
+                 String comment, boolean checkMedic) {
         this.kindOfPain = kindOfPain;
-        this.painArea = null;
-        this.intensity = 0;
-        this.from = null;
-        this.to = null;
-        this.date = null;
-        this.medics = null;
-        this.attendantSymptoms = null;
+        this.painArea = painArea;
+        this.intensity = intensity;
+        this.from = from;
+        this.to = to;
+        this.date = date;
+        this.medics = medics;
+        this.attendantSymptoms = attendantSymptoms;
         this.comment = comment;
         this.checkMedic = checkMedic;
     }
@@ -52,11 +47,11 @@ public class Entry {
         this.kindOfPain = kindOfPain;
     }
 
-    public String[] getPainArea() {
+    public String getPainArea() {
         return painArea;
     }
 
-    public void setPainArea(String[] painArea) {
+    public void setPainArea(String painArea) {
         this.painArea = painArea;
     }
 
@@ -68,27 +63,27 @@ public class Entry {
         this.intensity = intensity;
     }
 
-    public Time getFrom() {
+    public String getFrom() {
         return from;
     }
 
-    public void setFrom(Time from) {
+    public void setFrom(String from) {
         this.from = from;
     }
 
-    public Time getTo() {
+    public String getTo() {
         return to;
     }
 
-    public void setTo(Time to) {
+    public void setTo(String to) {
         this.to = to;
     }
 
-    public LocalDate getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDate date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -100,11 +95,11 @@ public class Entry {
         this.medics = medics;
     }
 
-    public String[] getAttendantSymptoms() {
+    public String getAttendantSymptoms() {
         return attendantSymptoms;
     }
 
-    public void setAttendantSymptoms(String[] attendantSymptoms) {
+    public void setAttendantSymptoms(String attendantSymptoms) {
         this.attendantSymptoms = attendantSymptoms;
     }
 
@@ -116,17 +111,18 @@ public class Entry {
         this.comment = comment;
     }
 
+    @NonNull
     @Override
     public String toString() {
         return "Entry{" +
                 "kindOfPain='" + kindOfPain + '\'' +
-                ", painArea=" + Arrays.toString(painArea) +
+                ", painArea=" + painArea +
                 ", intensity=" + intensity +
                 ", from=" + from +
                 ", to=" + to +
                 ", date=" + date +
                 ", medics='" + medics + '\'' +
-                ", attendantSymptoms=" + Arrays.toString(attendantSymptoms) +
+                ", attendantSymptoms=" + attendantSymptoms +
                 ", comment='" + comment + '\'' +
                 '}';
     }
