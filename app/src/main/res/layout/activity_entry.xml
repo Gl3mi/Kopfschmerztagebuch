@@ -100,55 +100,62 @@
                     android:text="@string/intensitaet"
                     android:textSize="15sp" />
 
-                <RadioGroup android:id="@+id/intensity">
+                <RadioGroup
+                    android:id="@+id/intensity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:gravity="center|end"
-                        android:paddingStart="30dp"
                         tools:ignore="RtlSymmetry,UselessParent">
 
                         <RadioButton
-                            android:layout_width="40dp"
+                            android:id="@+id/intensity1"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
-                            android:buttonTint="#00FF0A"
+                            android:buttonTint="@color/intensity1"
                             android:checked="false"
-                            android:scaleX=".8"
-                            android:scaleY=".8" />
+                            android:onClick="onRadioButtonClicked"/>
 
                         <RadioButton
-                            android:layout_width="40dp"
+                            android:id="@+id/intensity2"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
-                            android:buttonTint="#1BC122"
-                            android:scaleX=".8"
-                            android:scaleY=".8" />
+                            android:buttonTint="@color/intensity2"
+                            android:onClick="onRadioButtonClicked"/>
 
                         <RadioButton
-                            android:layout_width="40dp"
+                            android:id="@+id/intensity3"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
-                            android:buttonTint="#FF9800"
-                            android:scaleX=".8"
-                            android:scaleY=".8" />
+                            android:buttonTint="@color/intensity3"
+                            android:onClick="onRadioButtonClicked"/>
 
                         <RadioButton
-                            android:layout_width="40dp"
+                            android:id="@+id/intensity4"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
-                            android:buttonTint="#C81C1C"
-                            android:scaleX=".8"
-                            android:scaleY=".8" />
+                            android:buttonTint="@color/intensity4"
+                            android:onClick="onRadioButtonClicked"/>
 
                         <RadioButton
-                            android:layout_width="40dp"
+                            android:id="@+id/intensity5"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
-                            android:buttonTint="#FF0000"
-                            android:scaleX=".8"
-                            android:scaleY=".8" />
+                            android:buttonTint="@color/intensity5"
+                            android:onClick="onRadioButtonClicked"/>
                     </LinearLayout>
 
                 </RadioGroup>

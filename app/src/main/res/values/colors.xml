@@ -11,4 +11,9 @@
     <color name="accent">#EF2167</color>
     <color name="primary">#FFE500</color>
     <color name="gray">#D3D3D3</color>
+    <color name="intensity1">#00FF0A</color>
+    <color name="intensity2">#1BC122</color>
+    <color name="intensity3">#FF9800</color>
+    <color name="intensity4">#C81C1C</color>
+    <color name="intensity5">#FF0000</color>
 </resources>

@@ -3,12 +3,15 @@ package at.htlkaindorf.kopfschmerztagebuch.activity;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +23,7 @@ import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.List;
 
 import at.htlkaindorf.kopfschmerztagebuch.bl.Operator;
@@ -32,11 +36,11 @@ public class EntryActivity extends AppCompatActivity {
     private List<Entry> entries = new ArrayList<>();
     private Session session;
 
+    private int intensity = 0;
+
     private TextView kindOfPain;
     private TextView painArea;
     private TextView symptoms;
-
-    private RadioGroup intensity;
 
     private EditText medics;
     private EditText comment;
@@ -56,6 +60,12 @@ public class EntryActivity extends AppCompatActivity {
     boolean[] selectedSymptom;
     boolean[] selectedPainArea;
     boolean[] selectedKindOfPain;
+
+    private RadioButton intensity1;
+    private RadioButton intensity2;
+    private RadioButton intensity3;
+    private RadioButton intensity4;
+    private RadioButton intensity5;
 
     private final ArrayList<Integer> langListSymptom = new ArrayList<>();
     private final ArrayList<Integer> langListPainArea = new ArrayList<>();
@@ -79,11 +89,15 @@ public class EntryActivity extends AppCompatActivity {
 
         session = new Session(this);
 
+        intensity1 = findViewById(R.id.intensity1);
+        intensity2 = findViewById(R.id.intensity2);
+        intensity3 = findViewById(R.id.intensity3);
+        intensity4 = findViewById(R.id.intensity4);
+        intensity5 = findViewById(R.id.intensity5);
+
         kindOfPain = findViewById(R.id.kindOfPain);
         painArea = findViewById(R.id.painArea);
         symptoms = findViewById(R.id.symptoms);
-
-        intensity = findViewById(R.id.intensity);
 
         medics = findViewById(R.id.medics);
         comment = findViewById(R.id.comment);
@@ -91,6 +105,7 @@ public class EntryActivity extends AppCompatActivity {
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
         dateButton.setText(getTodaysDate());
+        chosenDate = getTodaysDate();
 
         initTimePicker();
         String currentTime = makeTimeString(Calendar.getInstance().get(Calendar.HOUR_OF_DAY),
@@ -100,6 +115,8 @@ public class EntryActivity extends AppCompatActivity {
         timeButtonFrom.setText(currentTime);
         timeButtonTo = findViewById(R.id.timePickerButtonTo);
         timeButtonTo.setText(currentTime);
+        chosenFrom = currentTime;
+        chosenTo = currentTime;
 
         //SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
 
@@ -123,24 +140,86 @@ public class EntryActivity extends AppCompatActivity {
         Gson gson = new Gson();
         Button bt = findViewById(R.id.addToList);
 
-        if (session.getEntries("data") != null){
+        if (session.getEntries("data") != null) {
             entries = session.getEntries("data");
         }
 
         bt.setOnClickListener(view -> {
-            Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
-                    String.valueOf(painArea.getText()), 0, chosenFrom, chosenTo,
-                    chosenDate, String.valueOf(medics.getText()),
-                    String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), false);
+            if (kindOfPain.getText().equals("") || painArea.getText().equals("")) {
+                Toast.makeText(this, "Es wurden nicht alle Pflichtfelder ausgefüllt!",
+                        Toast.LENGTH_SHORT).show();
+            } else {
+                Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
+                        String.valueOf(painArea.getText()), 0, chosenFrom, chosenTo,
+                        chosenDate, String.valueOf(medics.getText()),
+                        String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), false);
 
-            entries.add(entry);
+                entries.add(entry);
 
-            String json = gson.toJson(entries);
-            session.getEditor().putString("data", json).apply();
-            //viewModel.setLiveData(entry);
-
-            super.onBackPressed();
+                String json = gson.toJson(entries);
+                session.getEditor().putString("data", json).apply();
+                super.onBackPressed();
+            }
         });
+    }
+
+    @SuppressLint("NonConstantResourceId")
+    public void onRadioButtonClicked(@NonNull View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+
+        switch (view.getId()) {
+            case R.id.intensity1:
+                if (checked) {
+                    intensity = 1;
+                    intensity1.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity2.setBackgroundColor(Color.WHITE);
+                    intensity3.setBackgroundColor(Color.WHITE);
+                    intensity4.setBackgroundColor(Color.WHITE);
+                    intensity5.setBackgroundColor(Color.WHITE);
+                }
+                break;
+            case R.id.intensity2:
+                if (checked) {
+                    intensity = 2;
+                    intensity1.setBackgroundColor(Color.WHITE);
+                    intensity2.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity3.setBackgroundColor(Color.WHITE);
+                    intensity4.setBackgroundColor(Color.WHITE);
+                    intensity5.setBackgroundColor(Color.WHITE);
+                }
+                break;
+            case R.id.intensity3:
+                if (checked) {
+                    intensity = 3;
+                    intensity1.setBackgroundColor(Color.WHITE);
+                    intensity2.setBackgroundColor(Color.WHITE);
+                    intensity3.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity4.setBackgroundColor(Color.WHITE);
+                    intensity5.setBackgroundColor(Color.WHITE);
+                }
+                break;
+            case R.id.intensity4:
+                if (checked) {
+                    intensity = 4;
+                    intensity1.setBackgroundColor(Color.WHITE);
+                    intensity2.setBackgroundColor(Color.WHITE);
+                    intensity3.setBackgroundColor(Color.WHITE);
+                    intensity4.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity5.setBackgroundColor(Color.WHITE);
+                }
+                break;
+            case R.id.intensity5:
+                if (checked) {
+                    intensity = 5;
+                    intensity1.setBackgroundColor(Color.WHITE);
+                    intensity2.setBackgroundColor(Color.WHITE);
+                    intensity3.setBackgroundColor(Color.WHITE);
+                    intensity4.setBackgroundColor(Color.WHITE);
+                    intensity5.setBackgroundResource(R.drawable.rounded_corners);
+                }
+                break;
+        }
     }
 
     @NonNull
