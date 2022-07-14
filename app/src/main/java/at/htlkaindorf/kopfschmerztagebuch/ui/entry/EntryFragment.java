@@ -40,7 +40,10 @@ public class EntryFragment extends Fragment {
 
         View v = inflater.inflate(R.layout.fragment_entry, container, false);
 
+        session = new Session(requireContext());
+
         adapter = new EntryAdapter(container.getContext());
+        adapter.setEntries(session.getEntries("data"));
 
         recyclerView = v.findViewById(R.id.entryRecycler);
         recyclerView.setHasFixedSize(true);
@@ -48,8 +51,6 @@ public class EntryFragment extends Fragment {
         recyclerView.setAdapter(adapter);
 
         viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
-
-        session = new Session(requireContext());
 
         ImageButton bt = v.findViewById(R.id.add);
 

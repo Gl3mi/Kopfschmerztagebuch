@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
@@ -30,8 +31,12 @@ public class Session {
             Type type = new TypeToken<List<Entry>>(){}.getType();
 
             return gson.fromJson(json, type);
+        } else {
+            List<Entry> placeholder = new ArrayList<>();
+            placeholder.add(new Entry("Schmerzart", "", 0, "", "",
+                    "", "", "", "", false));
+            return placeholder;
         }
-        return null;
     }
 
     public SharedPreferences.Editor getEditor() {

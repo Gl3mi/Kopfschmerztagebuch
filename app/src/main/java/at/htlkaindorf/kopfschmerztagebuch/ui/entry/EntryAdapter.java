@@ -77,7 +77,10 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryViewHolder> implemen
 
     @Override
     public int getItemCount() {
-        return entries.size();
+        if (entries != null){
+            return entries.size();
+        }
+        return 0;
     }
 
     public List<Entry> getEntries() {

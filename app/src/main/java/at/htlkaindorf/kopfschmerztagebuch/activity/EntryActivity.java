@@ -123,7 +123,9 @@ public class EntryActivity extends AppCompatActivity {
         Gson gson = new Gson();
         Button bt = findViewById(R.id.addToList);
 
-        entries = session.getEntries("data");
+        if (session.getEntries("data") != null){
+            entries = session.getEntries("data");
+        }
 
         bt.setOnClickListener(view -> {
             Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
@@ -249,6 +251,7 @@ public class EntryActivity extends AppCompatActivity {
             case 12:
                 return "Dez";
         }
+
         return "Jan";
     }
 
