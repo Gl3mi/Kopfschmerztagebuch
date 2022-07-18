@@ -3,6 +3,7 @@ package at.htlkaindorf.kopfschmerztagebuch.activity;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,8 @@ import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 import at.htlkaindorf.kopfschmerztagebuch.bl.Session;
 import at.htlkaindorf.kopfschmerztagebuch.ui.SharedViewModel;
+import at.htlkaindorf.kopfschmerztagebuch.ui.entry.EntryAdapter;
+import at.htlkaindorf.kopfschmerztagebuch.ui.entry.EntryViewHolder;
 
 public class EntryActivity extends AppCompatActivity {
     private List<Entry> entries = new ArrayList<>();
@@ -144,13 +147,26 @@ public class EntryActivity extends AppCompatActivity {
             entries = session.getEntries("data");
         }
 
+        Intent intent = getIntent();
+
+        if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)){
+            kindOfPain.setText(intent.getStringExtra("kindOfPain"));
+            painArea.setText(intent.getStringExtra("painAre"));
+            timeButtonFrom.setText(intent.getStringExtra("from"));
+            timeButtonTo.setText(intent.getStringExtra("to"));
+            dateButton.setText(intent.getStringExtra("date"));
+            medics.setText(intent.getStringExtra("medics"));
+            symptoms.setText(intent.getStringExtra("symptoms"));
+            comment.setText(intent.getStringExtra("comment"));
+        }
+
         bt.setOnClickListener(view -> {
             if (kindOfPain.getText().equals("") || painArea.getText().equals("")) {
                 Toast.makeText(this, "Es wurden nicht alle Pflichtfelder ausgefüllt!",
                         Toast.LENGTH_SHORT).show();
             } else {
                 Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
-                        String.valueOf(painArea.getText()), 0, chosenFrom, chosenTo,
+                        String.valueOf(painArea.getText()), intensity, chosenFrom, chosenTo,
                         chosenDate, String.valueOf(medics.getText()),
                         String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), false);
 

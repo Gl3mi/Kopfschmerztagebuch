@@ -70,8 +70,6 @@ public class EntryFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        System.out.println(viewModel.getLiveData());
-
         adapter.setEntries(session.getEntries("data"));
         recyclerView.setAdapter(adapter);
     }

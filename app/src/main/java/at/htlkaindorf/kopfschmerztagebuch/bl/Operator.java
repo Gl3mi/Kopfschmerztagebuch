@@ -2,6 +2,7 @@ package at.htlkaindorf.kopfschmerztagebuch.bl;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -9,6 +10,8 @@ import androidx.appcompat.app.AlertDialog;
 
 import java.util.ArrayList;
 import java.util.Collections;
+
+import at.htlkaindorf.kopfschmerztagebuch.R;
 
 public class Operator implements View.OnClickListener {
     private final Context context;
@@ -56,6 +59,11 @@ public class Operator implements View.OnClickListener {
                 langList.add(which);
             });
         } else {
+            if(check.equals("painArea")){
+                ImageView image = new ImageView(v.getContext());
+                image.setImageResource(R.mipmap.ic_empty_pill);
+                builder.setView(image);
+            }
             builder.setMultiChoiceItems(items, selectedItems, (dialog, which, isChecked) -> {
                 if (isChecked) {
                     langList.add(which);
