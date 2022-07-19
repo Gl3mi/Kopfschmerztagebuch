@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -72,8 +71,8 @@ public class EntryActivity extends AppCompatActivity {
     private final String[] kindOfPainList = {"Migräne", "Spannungskopfschmerzen",
             "Cluster-Kopfschmerzen", "Sinusitis-Kopfschmerzen", "Sonstige Kopfschmerzen"};
 
-    private final String[] painAreaList = {"Oben", "Unten", "Links", "Rechts", "Mitte",
-            "Vorne", "Hinten", "Schläfe", "Augenbereich"};
+    private final String[] painAreaList = {"Oben", "Stirn", "Hinterkopf",
+            "Wange L", "Wange R", "Schläfe L", "Schläfe R", "Augenbereich L", "Augenbereich R"};
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -145,7 +144,7 @@ public class EntryActivity extends AppCompatActivity {
         }
 
         bt.setOnClickListener(view -> {
-            if (kindOfPain.getText().equals("") || painArea.getText().equals("")) {
+            if (kindOfPain.getText().equals("") || painArea.getText().equals("") || intensity == 0) {
                 Toast.makeText(this, "Es wurden nicht alle Pflichtfelder ausgefüllt!",
                         Toast.LENGTH_SHORT).show();
             } else if (checkDate()) {
@@ -177,12 +176,11 @@ public class EntryActivity extends AppCompatActivity {
     public void onRadioButtonClicked(@NonNull View view) {
         boolean checked = ((RadioButton) view).isChecked();
 
-
         switch (view.getId()) {
             case R.id.intensity1:
                 if (checked) {
                     intensity = 1;
-                    intensity1.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity1.setBackgroundResource(R.drawable.smiley);
                     intensity2.setBackgroundColor(Color.WHITE);
                     intensity3.setBackgroundColor(Color.WHITE);
                     intensity4.setBackgroundColor(Color.WHITE);

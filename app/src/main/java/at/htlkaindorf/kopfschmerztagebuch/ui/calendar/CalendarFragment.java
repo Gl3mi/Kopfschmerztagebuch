@@ -123,11 +123,11 @@ public class CalendarFragment extends Fragment {
 
             } catch (NoSuchElementException | IllegalArgumentException e) {
                 e.printStackTrace();
-                kindOfPain.setText("");
-                painArea.setText("");
-                intensity.setText("");
-                medics.setText("");
-                duration.setText("");
+                kindOfPain.setText("-");
+                painArea.setText("-");
+                intensity.setText("-");
+                medics.setText("-");
+                duration.setText("-");
             }
         });
 

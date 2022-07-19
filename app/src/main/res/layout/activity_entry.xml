@@ -116,7 +116,11 @@
 
                         <RadioButton
                             android:id="@+id/intensity1"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
                             android:layout_weight="1"
+                            android:layout_marginEnd="15dp"
+                            android:text="@null"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_happy"
@@ -127,6 +131,9 @@
                         <RadioButton
                             android:id="@+id/intensity2"
                             android:layout_weight="1"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:layout_marginEnd="15dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_ok"
@@ -137,17 +144,23 @@
                             android:id="@+id/intensity3"
                             android:layout_weight="1"
                             android:layout_width="0dp"
+                            android:layout_marginEnd="15dp"
                             android:layout_height="wrap_content"
                             android:button="@drawable/ic_mid"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
                             android:buttonTint="@color/intensity3"
                             android:onClick="onRadioButtonClicked"/>
 
                         <RadioButton
                             android:id="@+id/intensity4"
+                            android:layout_marginEnd="15dp"
                             android:layout_weight="1"
                             android:layout_width="0dp"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
                             android:layout_height="wrap_content"
-                            android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+                            android:button="@drawable/ic_bad"
                             android:buttonTint="@color/intensity4"
                             android:onClick="onRadioButtonClicked"/>
 
@@ -156,7 +169,9 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:button="@drawable/ic_worst"
                             android:buttonTint="@color/intensity5"
                             android:onClick="onRadioButtonClicked"/>
                     </LinearLayout>
