@@ -57,9 +57,9 @@
             - Reizungen der Nasennebenhöhlen vermeiden. Nicht selbst Rauchen und nicht Passivrauchen. Frische Luft und häufiges Lüften sind wichtig. Unreine Luft führt zu Schwellungen und kann zu Entzündungen führen.\n
         </string>
     <string name="links">https://www.dmkg.de/startseite \n https://schmerzklinik.de/2914/ \n https://www.gesundheitsinformation.de/ \n https://www.oeksg.at/</string>
-    <string name="art">Schmerzart</string>
-    <string name="bereich">Schmerzbereich</string>
-    <string name="intensitaet">Intensität</string>
+    <string name="art">* Schmerzart</string>
+    <string name="bereich">* Schmerzbereich</string>
+    <string name="intensitaet">* Intensität</string>
     <string name="von">Von</string>
     <string name="bis">Bis</string>
     <string name="datum">Datum</string>
@@ -75,5 +75,11 @@
     <string name="back"><![CDATA[<|]]></string>
     <string name="forward"><![CDATA[|>]]></string>
     <string name="dauer">Dauer</string>
+    <string name="medikament_neinnahmen">Medikamente</string>
+    <string name="durchschn_intensitaet">Durchschn. Intensität</string>
+    <string name="hoehster_streak">Höchster Streak</string>
+    <string name="anzahl_der_nvorkommen">Anzahl der Vorkommen</string>
+    <string name="durchschn_dauer">Durchschn. Dauer</string>
+    <string name="h_ufigster_bereich">Häufigster Bereich</string>
 
 </resources>

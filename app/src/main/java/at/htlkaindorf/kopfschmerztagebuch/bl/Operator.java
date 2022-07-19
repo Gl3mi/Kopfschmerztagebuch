@@ -61,7 +61,9 @@ public class Operator implements View.OnClickListener {
         } else {
             if(check.equals("painArea")){
                 ImageView image = new ImageView(v.getContext());
-                image.setImageResource(R.mipmap.ic_empty_pill);
+                image.setImageResource(R.mipmap.ic_koepfe);
+                image.setScaleX(3f);
+                image.setScaleY(3f);
                 builder.setView(image);
             }
             builder.setMultiChoiceItems(items, selectedItems, (dialog, which, isChecked) -> {
