@@ -77,9 +77,16 @@
     <string name="dauer">Dauer</string>
     <string name="medikament_neinnahmen">Medikamente</string>
     <string name="durchschn_intensitaet">Durchschn. Intensität</string>
-    <string name="hoehster_streak">Höchster Streak</string>
+    <string name="hoehster_streak">Höchste Streak</string>
     <string name="anzahl_der_nvorkommen">Anzahl der Vorkommen</string>
     <string name="durchschn_dauer">Durchschn. Dauer</string>
     <string name="h_ufigster_bereich">Häufigster Bereich</string>
-
+    <string name="legend">LEGENDE</string>
+    <string name="legend_text">KALENDER \nKlick auf das Datum und eine Mini-Zusammenfassung
+        erscheint, wenn Datum Eintrag besitzt \n \nHINZUFÜGEN-LISTE \nEintrag kann durch das Plus
+        hinzugefügt werden oder durch nach links
+        Wischen gelöscht werden \nGefüllte Pille —> Medikamente wurden eingenommen \nLeere Pille —>
+        keine eingenommenen Medikamente \n \nHINZUFÜGEN-EINTRAG \nRot markierte
+        Plfichtfelder \nIntensität der Schmerzen: \n Hellgrün —> Sehr leicht \n Grün —>
+        Leicht \n Orange —> Mittel \n Rot —> Stark \n Dunkelrot —> Sehr stark</string>
 </resources>

@@ -71,8 +71,8 @@ public class EntryActivity extends AppCompatActivity {
     private final String[] kindOfPainList = {"Migräne", "Spannungskopfschmerzen",
             "Cluster-Kopfschmerzen", "Sinusitis-Kopfschmerzen", "Sonstige Kopfschmerzen"};
 
-    private final String[] painAreaList = {"Oben", "Stirn", "Hinterkopf",
-            "Wange L", "Wange R", "Schläfe L", "Schläfe R", "Augenbereich L", "Augenbereich R"};
+    private final String[] painAreaList = {"1-Oben", "2-Stirn", "3-Hinterkopf", "4-Wange L",
+            "5-Wange R", "6-Schläfe L", "7-Schläfe R", "8-Augenbereich L", "9-Augenbereich R"};
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -123,8 +123,7 @@ public class EntryActivity extends AppCompatActivity {
         symptoms.setOnClickListener(new Operator(this, langListSymptom,
                 symptomList, symptoms, "symptoms"));
 
-        Gson gson = new Gson();
-        Button bt = findViewById(R.id.addToList);
+        Button add = findViewById(R.id.addToList);
 
         if (session.getEntries("data") != null) {
             entries = session.getEntries("data");
@@ -143,7 +142,7 @@ public class EntryActivity extends AppCompatActivity {
             comment.setText(intent.getStringExtra("comment"));
         }
 
-        bt.setOnClickListener(view -> {
+        add.setOnClickListener(view -> {
             if (kindOfPain.getText().equals("") || painArea.getText().equals("") || intensity == 0) {
                 Toast.makeText(this, "Es wurden nicht alle Pflichtfelder ausgefüllt!",
                         Toast.LENGTH_SHORT).show();
@@ -152,6 +151,7 @@ public class EntryActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             } else {
                 boolean medic = !String.valueOf(medics.getText()).equals("");
+                Gson gson = new Gson();
 
                 Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
                         String.valueOf(painArea.getText()), intensity, chosenFrom, chosenTo,

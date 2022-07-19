@@ -16,6 +16,7 @@ public class SummaryFragment extends Fragment {
 
     private FragmentSummaryBinding binding;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         SummaryViewModel summaryViewModel =
@@ -24,8 +25,8 @@ public class SummaryFragment extends Fragment {
         binding = FragmentSummaryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textSummary;
-        summaryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        //final TextView textView = binding.textSummary;
+        //summaryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 

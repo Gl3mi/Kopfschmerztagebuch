@@ -34,37 +34,25 @@ public class Operator implements View.OnClickListener {
     public void onClick(View v) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
-        // set title
-        switch (check) {
-            case "kindOfPain":
-                builder.setTitle("Schmerzart");
-                break;
-            case "painArea":
-                builder.setTitle("Schmerzbereich");
-                break;
-            case "symptoms":
-                builder.setTitle("Beigleitsymptome");
-                break;
-            default:
-                builder.setTitle("");
-                break;
-        }
-
         // set dialog non cancelable
         builder.setCancelable(false);
 
         if (check.equals("kindOfPain")) {
+            builder.setTitle("Schmerzart");
             builder.setSingleChoiceItems(items, -1, (dialog, which) -> {
                 langList.clear();
                 langList.add(which);
             });
         } else {
-            if(check.equals("painArea")){
+            if (check.equals("painArea")) {
+                builder.setTitle("Schmerzbereich");
                 ImageView image = new ImageView(v.getContext());
                 image.setImageResource(R.mipmap.ic_koepfe);
                 image.setScaleX(3f);
                 image.setScaleY(3f);
                 builder.setView(image);
+            } else {
+                builder.setTitle("Beigleitsymptome");
             }
             builder.setMultiChoiceItems(items, selectedItems, (dialog, which, isChecked) -> {
                 if (isChecked) {

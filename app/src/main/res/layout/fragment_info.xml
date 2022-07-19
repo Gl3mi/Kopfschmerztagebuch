@@ -27,10 +27,35 @@
                 android:padding="15dp">
 
                 <Button
+                    android:id="@+id/legend_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/legend"
+                    android:textAlignment="center"
+                    app:backgroundTint="@color/purple_700"
+                    android:background="@drawable/rounded_corners"
+                    android:textColor="@color/white"
+                    android:textSize="50sp" />
+
+                <TextView
+                    android:id="@+id/legend_tf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:padding="30dp"
+                    android:text="@string/legend_text"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:visibility="gone"
+                    tools:ignore="ObsoleteLayoutParam" />
+
+                <Button
                     android:id="@+id/migraine_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/migraene"
+                    android:layout_marginTop="15dp"
                     android:textAlignment="center"
                     app:backgroundTint="@color/blue"
                     android:background="@drawable/rounded_corners"
