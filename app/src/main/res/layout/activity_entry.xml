@@ -46,7 +46,8 @@
                     android:layout_weight="1"
                     android:gravity="center|start"
                     android:text="@string/art"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@color/red"/>
 
                 <TextView
                     android:id="@+id/kindOfPain"
@@ -72,7 +73,8 @@
                     android:layout_weight="1"
                     android:gravity="center|start"
                     android:text="@string/bereich"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@color/red"/>
 
                 <TextView
                     android:id="@+id/painArea"
@@ -98,7 +100,8 @@
                     android:layout_weight=".3"
                     android:gravity="center|start"
                     android:text="@string/intensitaet"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@color/red"/>
 
                 <RadioGroup
                     android:id="@+id/intensity"
@@ -116,7 +119,7 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+                            android:button="@drawable/ic_happy"
                             android:buttonTint="@color/intensity1"
                             android:checked="false"
                             android:onClick="onRadioButtonClicked"/>
@@ -126,7 +129,7 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+                            android:button="@drawable/ic_ok"
                             android:buttonTint="@color/intensity2"
                             android:onClick="onRadioButtonClicked"/>
 
@@ -135,7 +138,7 @@
                             android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:button="@drawable/ic_baseline_sentiment_satisfied_alt_24"
+                            android:button="@drawable/ic_mid"
                             android:buttonTint="@color/intensity3"
                             android:onClick="onRadioButtonClicked"/>
 
