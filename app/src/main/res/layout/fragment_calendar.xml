@@ -42,7 +42,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/text_calendar5"
+                        android:id="@+id/tvKindOfPain"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -55,7 +55,7 @@
                         android:textStyle="bold|italic" />
 
                     <TextView
-                        android:id="@+id/pain_type"
+                        android:id="@+id/kindOfPain"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -71,7 +71,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/text_calendar2"
+                        android:id="@+id/tvPainArea"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -84,7 +84,7 @@
                         android:textStyle="bold|italic" />
 
                     <TextView
-                        android:id="@+id/pain_area"
+                        android:id="@+id/painArea"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -101,7 +101,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/text_calendar3"
+                        android:id="@+id/tvIntensity"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -130,7 +130,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/text_calendar4"
+                        android:id="@+id/tvMedics"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -159,7 +159,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/text_calendar6"
+                        android:id="@+id/tvDuration"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"

@@ -15,10 +15,10 @@ import java.util.List;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 
 public class Session {
-    private SharedPreferences sharedPreferences;
+    private final SharedPreferences sharedPreferences;
     private final String MYPREFS = "myprefs";
     private final Gson gson = new Gson();
-    private SharedPreferences.Editor editor;
+    private final SharedPreferences.Editor editor;
 
     public Session(@NonNull Context context) {
         this.sharedPreferences = context.getSharedPreferences(MYPREFS, Context.MODE_PRIVATE);
@@ -41,17 +41,5 @@ public class Session {
 
     public SharedPreferences.Editor getEditor() {
         return editor;
-    }
-
-    public void setEditor(SharedPreferences.Editor editor) {
-        this.editor = editor;
-    }
-
-    public SharedPreferences getSharedPreferences() {
-        return sharedPreferences;
-    }
-
-    public void setSharedPreferences(SharedPreferences sharedPreferences) {
-        this.sharedPreferences = sharedPreferences;
     }
 }

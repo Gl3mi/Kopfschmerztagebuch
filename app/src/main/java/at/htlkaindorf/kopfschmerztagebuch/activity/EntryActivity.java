@@ -10,13 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.google.gson.Gson;
 
@@ -24,26 +23,18 @@ import org.jetbrains.annotations.Contract;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.List;
 
-import at.htlkaindorf.kopfschmerztagebuch.bl.Operator;
 import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
+import at.htlkaindorf.kopfschmerztagebuch.bl.Operator;
 import at.htlkaindorf.kopfschmerztagebuch.bl.Session;
-import at.htlkaindorf.kopfschmerztagebuch.ui.SharedViewModel;
-import at.htlkaindorf.kopfschmerztagebuch.ui.entry.EntryAdapter;
-import at.htlkaindorf.kopfschmerztagebuch.ui.entry.EntryViewHolder;
 
 public class EntryActivity extends AppCompatActivity {
     private List<Entry> entries = new ArrayList<>();
     private Session session;
 
     private int intensity = 0;
-
-    private TextView kindOfPain;
-    private TextView painArea;
-    private TextView symptoms;
 
     private EditText medics;
     private EditText comment;
@@ -98,10 +89,6 @@ public class EntryActivity extends AppCompatActivity {
         intensity4 = findViewById(R.id.intensity4);
         intensity5 = findViewById(R.id.intensity5);
 
-        kindOfPain = findViewById(R.id.kindOfPain);
-        painArea = findViewById(R.id.painArea);
-        symptoms = findViewById(R.id.symptoms);
-
         medics = findViewById(R.id.medics);
         comment = findViewById(R.id.comment);
 
@@ -121,8 +108,6 @@ public class EntryActivity extends AppCompatActivity {
         chosenFrom = currentTime;
         chosenTo = currentTime;
 
-        //SharedViewModel viewModel = new ViewModelProvider(this).get(SharedViewModel.class);
-
         TextView symptoms = findViewById(R.id.symptoms);
         selectedSymptom = new boolean[symptomList.length];
 
@@ -139,7 +124,6 @@ public class EntryActivity extends AppCompatActivity {
         symptoms.setOnClickListener(new Operator(this, langListSymptom,
                 symptomList, symptoms, "symptoms"));
 
-
         Gson gson = new Gson();
         Button bt = findViewById(R.id.addToList);
 
@@ -149,9 +133,9 @@ public class EntryActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        if (intent != null && intent.hasExtra(Intent.EXTRA_TEXT)){
+        if (intent != null && intent.hasExtra("kindOfPain")) {
             kindOfPain.setText(intent.getStringExtra("kindOfPain"));
-            painArea.setText(intent.getStringExtra("painAre"));
+            painArea.setText(intent.getStringExtra("painArea"));
             timeButtonFrom.setText(intent.getStringExtra("from"));
             timeButtonTo.setText(intent.getStringExtra("to"));
             dateButton.setText(intent.getStringExtra("date"));
@@ -164,19 +148,29 @@ public class EntryActivity extends AppCompatActivity {
             if (kindOfPain.getText().equals("") || painArea.getText().equals("")) {
                 Toast.makeText(this, "Es wurden nicht alle Pflichtfelder ausgefüllt!",
                         Toast.LENGTH_SHORT).show();
+            } else if (checkDate()) {
+                Toast.makeText(this, "Eintrag mit dem Datum schon vorhanden!",
+                        Toast.LENGTH_SHORT).show();
             } else {
+                boolean medic = !String.valueOf(medics.getText()).equals("");
+
                 Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
                         String.valueOf(painArea.getText()), intensity, chosenFrom, chosenTo,
                         chosenDate, String.valueOf(medics.getText()),
-                        String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), false);
+                        String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), medic);
 
                 entries.add(entry);
 
                 String json = gson.toJson(entries);
                 session.getEditor().putString("data", json).apply();
+
                 super.onBackPressed();
             }
         });
+    }
+
+    public boolean checkDate() {
+        return entries.stream().anyMatch(entry -> entry.getDate().equals(chosenDate));
     }
 
     @SuppressLint("NonConstantResourceId")
