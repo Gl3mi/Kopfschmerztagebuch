@@ -9,11 +9,11 @@
     <string name="more_info">MORE INFORMATION</string>
     <string name="add">ADD</string>
     <string name="medics">Medikamente</string>
-    <string name="migraene">Migräne</string>
-    <string name="spannung">Spannungs-\nKopfschmerzen</string>
+    <string name="migraine">Migräne</string>
+    <string name="tension">Spannungs-\nKopfschmerzen</string>
     <string name="cluster">Cluster-\nKopfschmerzen</string>
     <string name="sinus">Sinusitis-\nKopfschmerzen</string>
-    <string name="migraene_text">Migräne ist eine Art der Kopfschmerzen die nicht so häufig wie Spannungskopfschmerzen auftritt. Hierbei haben Frauen, oft aufgrund der Menstruation, häufiger Migräne als Männer. Man ist durch sie sehr oft stärker eingeschränkt als bei Spannungskopfschmerzen, da eine Migräne deutlich stärker ist.
+    <string name="migraine_text">Migräne ist eine Art der Kopfschmerzen die nicht so häufig wie Spannungskopfschmerzen auftritt. Hierbei haben Frauen, oft aufgrund der Menstruation, häufiger Migräne als Männer. Man ist durch sie sehr oft stärker eingeschränkt als bei Spannungskopfschmerzen, da eine Migräne deutlich stärker ist.
         Die Schmerzen sind hierbei oft auf einer Seite des Kopfes und geben ein pulsierendes, pochendes oder hämmerndes Gefühl ab. Oft steht Migräne mit Übelkeit und schwindelerregenden Gefühlen in Verbindung.
         Bevor die eigentliche Migräne einsetzt, nehmen manche Menschen eine sogenannte “Aura” wahr. Dieser Begriff beschreibt eine leicht verschwommene oder verwackelte Sicht oder Lichtblitze oder eigenartige Formen. Diese verschwindet innerhalb einer Stunde folgenlos wieder.
         Kopfschmerzen werden als Migräne eingestuft, wenn typische Merkmale mehr als fünfmal auftreten.\n\nEine Migräne kann in seltenen Fällen auch chronisch werden. Das ist der Fall, wenn über einen Zeitraum von drei Monaten, an mindestens 15 Tagen pro Monat Beschwerden auftreten.
@@ -21,7 +21,7 @@
         Unregelmäßige Schlaf- und Essenszeiten können die Anfallswahrscheinlichkeit erhöhen.\n\nHilfreich gegen eine Migräne sind feste Gewohnheiten oder Verhaltensweisen um Abweichungen und Unregelmäßigkeit als Auslöser zu vermeiden. Eine Dokumentation für eingenommen Medikamente und Nahrung würde kann auch helfen. So kann man leichter mögliche Auslöser identifizieren und zum Beispiel auf einen dieser, für eine Zeit verzichten
         Manche Menschen verwenden auch Nahrungsergänzungsmittel pflanzliche Arzneimittel oder Entspannungsverfahren. Bei zu starken Anfällen kann man Medikamente verwenden oder sich einer Behandlung unterziehen. Dabei kann man Techniken lernen wie man mit verschiedene Situationen umgehen kann.
     </string>
-    <string name="spannung_text">Einer der häufigsten vorkommenden Varianten sind Spannungskopfschmerzen.
+    <string name="tension_text">Einer der häufigsten vorkommenden Varianten sind Spannungskopfschmerzen.
         Obwohl sie schwächer als Migräne oder Cluster-Kopfschmerzen sind, sind sie dennoch belastend.
         Da die Ursache der Schmerzen nicht bekannt ist, gehören sie zu den primären Kopfschmerzen.
         Ihr Auftreten ist sehr häufig und treten bei jungen Erwachsenen zu ersten Mal auf (bei Frauen öfter).
@@ -57,30 +57,30 @@
             - Reizungen der Nasennebenhöhlen vermeiden. Nicht selbst Rauchen und nicht Passivrauchen. Frische Luft und häufiges Lüften sind wichtig. Unreine Luft führt zu Schwellungen und kann zu Entzündungen führen.\n
         </string>
     <string name="links">https://www.dmkg.de/startseite \n https://schmerzklinik.de/2914/ \n https://www.gesundheitsinformation.de/ \n https://www.oeksg.at/</string>
-    <string name="art">* Schmerzart</string>
-    <string name="bereich">* Schmerzbereich</string>
-    <string name="intensitaet">* Intensität</string>
-    <string name="von">Von</string>
-    <string name="bis">Bis</string>
-    <string name="datum">Datum</string>
-    <string name="medikamemente">Medikamente</string>
-    <string name="medikamente_dings">Dings</string>
-    <string name="begleit">Begleitsymptome</string>
-    <string name="anmerkung">Anmerkung</string>
+    <string name="type">Schmerzart</string>
+    <string name="area">Schmerzbereich</string>
+    <string name="intensity">Intensität</string>
+    <string name="typeH">* Schmerzart</string>
+    <string name="areaH">* Schmerzbereich</string>
+    <string name="intensityH">* Intensität</string>
+    <string name="start">Von</string>
+    <string name="end">Bis</string>
+    <string name="date">Datum</string>
+    <string name="accompany">Begleitsymptome</string>
+    <string name="comment">Anmerkung</string>
     <string name="jan_01_2022">JAN 01 2022</string>
-    <string name="auswaehlen">Auswählen</string>
-    <string name="anmerkung_Hint">Anmerkung</string>
+    <string name="choose">Auswählen</string>
+    <string name="comment_Hint">Anmerkung</string>
     <string name="_01_00">01:00</string>
     <string name="_24">24</string>
     <string name="back"><![CDATA[<|]]></string>
     <string name="forward"><![CDATA[|>]]></string>
-    <string name="dauer">Dauer</string>
-    <string name="medikament_neinnahmen">Medikamente</string>
-    <string name="durchschn_intensitaet">Durchschn. Intensität</string>
-    <string name="hoehster_streak">Höchste Streak</string>
-    <string name="anzahl_der_nvorkommen">Anzahl der Vorkommen</string>
-    <string name="durchschn_dauer">Durchschn. Dauer</string>
-    <string name="h_ufigster_bereich">Häufigster Bereich</string>
+    <string name="duration">Dauer</string>
+    <string name="average_intensity">Durchschn. Intensität</string>
+    <string name="highest_streak">Höchste Streak</string>
+    <string name="number_happened">Anzahl der Vorkommen</string>
+    <string name="average_duration">Durchschn. Dauer</string>
+    <string name="most_area">Häufigster Bereich</string>
     <string name="legend">LEGENDE</string>
     <string name="legend_text">KALENDER \nKlick auf das Datum und eine Mini-Zusammenfassung
         erscheint, wenn Datum Eintrag besitzt \n \nHINZUFÜGEN-LISTE \nEintrag kann durch das Plus

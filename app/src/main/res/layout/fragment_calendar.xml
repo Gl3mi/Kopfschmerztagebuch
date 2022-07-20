@@ -49,7 +49,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:text="@string/art"
+                        android:text="@string/type"
                         android:textColor="@color/blue"
                         android:textSize="15sp"
                         android:textStyle="bold|italic" />
@@ -78,7 +78,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:text="@string/bereich"
+                        android:text="@string/area"
                         android:textColor="@color/blue"
                         android:textSize="15sp"
                         android:textStyle="bold|italic" />
@@ -108,7 +108,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_weight=".2"
-                        android:text="@string/intensitaet"
+                        android:text="@string/intensity"
                         android:textColor="@color/blue"
                         android:textSize="15sp"
                         android:textStyle="bold|italic" />
@@ -137,7 +137,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_weight="1"
-                        android:text="@string/medikamemente"
+                        android:text="@string/medics"
                         android:textColor="@color/blue"
                         android:textSize="15sp"
                         android:textStyle="bold|italic" />
@@ -166,7 +166,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_marginEnd="8dp"
                         android:layout_weight=".2"
-                        android:text="@string/dauer"
+                        android:text="@string/duration"
                         android:textColor="@color/blue"
                         android:textSize="15sp"
                         android:textStyle="bold|italic" />
