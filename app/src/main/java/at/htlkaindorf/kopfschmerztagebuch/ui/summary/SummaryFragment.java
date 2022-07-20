@@ -52,10 +52,10 @@ public class SummaryFragment extends Fragment {
         TableRow otherTr = binding.otherTr;
 
         migraeneTv.setText("Migräne");
-        tensionTv.setText("Spannungskopfschmerzen");
-        clusterTv.setText("Cluster-Kopfschmerzen");
-        sinusTv.setText("Sinusitis-Kopfschmerzen");
-        otherTv.setText("Sonstige Kopfschmerzen");
+        tensionTv.setText("Spannungs-\nkopfschmerzen");
+        clusterTv.setText("Cluster-\nKopfschmerzen");
+        sinusTv.setText("Sinusitis-\nKopfschmerzen");
+        otherTv.setText("Sonstige-\nKopfschmerzen");
 
         tv1 = binding.tv1;
         tv2 = binding.tv2;

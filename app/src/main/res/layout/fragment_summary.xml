@@ -39,7 +39,7 @@
                     android:id="@+id/piechart"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
-                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
                     android:layout_weight="1"
@@ -53,7 +53,6 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight=".2">
 
@@ -61,7 +60,7 @@
                     android:id="@+id/migraeneTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -76,23 +75,24 @@
 
                     <TextView
                         android:id="@+id/migraeneTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="1"
+                        android:layout_weight="3"
                         android:fontFamily="sans-serif-light"
-                        android:textSize="15sp" />
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/tv1"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:gravity="end"
+                        android:gravity="start"
                         android:text="0"
                         android:textColor="@color/red"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </TableRow>
@@ -101,7 +101,7 @@
                     android:id="@+id/tensionTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -116,23 +116,23 @@
 
                     <TextView
                         android:id="@+id/tensionTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-light"
-                        android:textSize="15sp" />
+                        android:layout_weight="3"                        android:fontFamily="sans-serif-light"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/tv2"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:gravity="end"
+                        android:gravity="start"
                         android:text="0"
                         android:textColor="@color/red"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </TableRow>
@@ -141,7 +141,7 @@
                     android:id="@+id/clusterTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -156,23 +156,23 @@
 
                     <TextView
                         android:id="@+id/clusterTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-light"
-                        android:textSize="15sp" />
+                        android:layout_weight="3"                        android:fontFamily="sans-serif-light"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/tv3"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:gravity="end"
+                        android:gravity="start"
                         android:text="0"
                         android:textColor="@color/red"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </TableRow>
@@ -181,7 +181,7 @@
                     android:id="@+id/sinusTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp">
+                    android:layout_marginBottom="5dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -196,23 +196,23 @@
 
                     <TextView
                         android:id="@+id/sinusTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-light"
-                        android:textSize="15sp" />
+                        android:layout_weight="3"                        android:fontFamily="sans-serif-light"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/tv4"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:gravity="end"
+                        android:gravity="start"
                         android:text="0"
                         android:textColor="@color/red"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </TableRow>
@@ -235,23 +235,23 @@
 
                     <TextView
                         android:id="@+id/otherTv"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:layout_weight="1"
-                        android:fontFamily="sans-serif-light"
-                        android:textSize="15sp" />
+                        android:layout_weight="3"                        android:fontFamily="sans-serif-light"
+                        android:textSize="13sp"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:id="@+id/tv5"
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:gravity="end"
+                        android:gravity="start"
                         android:text="0"
                         android:textColor="@color/red"
-                        android:textSize="18sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
                 </TableRow>
