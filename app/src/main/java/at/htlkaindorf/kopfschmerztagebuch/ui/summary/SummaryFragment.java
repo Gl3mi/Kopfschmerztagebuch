@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TableRow;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,6 +23,11 @@ public class SummaryFragment extends Fragment {
 
     private FragmentSummaryBinding binding;
     private Analysis analysis;
+    TextView tv1;
+    TextView tv2;
+    TextView tv3;
+    TextView tv4;
+    TextView tv5;
 
     @SuppressLint("SetTextI18n")
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -33,10 +39,29 @@ public class SummaryFragment extends Fragment {
         Analyse analyse = new Analyse(requireContext());
         analysis = analyse.createAnalysis();
 
-        TextView tvR = binding.tv1;
-        TextView tvPython = binding.tv2;
-        TextView tvCPP = binding.tv3;
-        TextView tvJava = binding.tv4;
+        TextView migraeneTv = binding.migraeneTv;
+        TextView tensionTv = binding.tensionTv;
+        TextView clusterTv = binding.clusterTv;
+        TextView sinusTv = binding.sinusTv;
+        TextView otherTv = binding.otherTv;
+
+        TableRow sinusTr = binding.sinusTr;
+        TableRow clusterTr = binding.clusterTr;
+        TableRow tensionTr = binding.tensionTr;
+        TableRow migraeneTr = binding.migraeneTr;
+        TableRow otherTr = binding.otherTr;
+
+        migraeneTv.setText("Migräne");
+        tensionTv.setText("Spannungskopfschmerzen");
+        clusterTv.setText("Cluster-Kopfschmerzen");
+        sinusTv.setText("Sinusitis-Kopfschmerzen");
+        otherTv.setText("Sonstige Kopfschmerzen");
+
+        tv1 = binding.tv1;
+        tv2 = binding.tv2;
+        tv3 = binding.tv3;
+        tv4 = binding.tv4;
+        tv5 = binding.tv5;
         PieChart pieChart = binding.piechart;
 
         analysis.getPercentage().forEach(s -> {
@@ -44,39 +69,79 @@ public class SummaryFragment extends Fragment {
 
             switch (h[0]) {
                 case "Migräne":
-                    pieChart.addPieSlice(
-                            new PieModel(
-                                    h[0],
-                                    (float) Double.parseDouble(h[1]),
-                                    Color.parseColor("#FFA726")));
+                    if (Double.parseDouble(h[1]) > 0) {
+                        migraeneTr.setVisibility(View.VISIBLE);
+
+                        pieChart.addPieSlice(
+                                new PieModel(
+                                        h[0],
+                                        (float) Double.parseDouble(h[1]),
+                                        Color.parseColor("#2196F3")));
+
+                        tv1.setText(h[1]);
+                    } else {
+                        migraeneTr.setVisibility(View.GONE);
+                    }
                     break;
                 case "Spannungskopfschmerzen":
-                    pieChart.addPieSlice(
-                            new PieModel(
-                                    h[0],
-                                    (float) Double.parseDouble(h[1]),
-                                    Color.parseColor("#66BB6A")));
+                    if (Double.parseDouble(h[1]) > 0) {
+                        tensionTr.setVisibility(View.VISIBLE);
+
+                        pieChart.addPieSlice(
+                                new PieModel(
+                                        h[0],
+                                        (float) Double.parseDouble(h[1]),
+                                        Color.parseColor("#FF0000")));
+
+                        tv2.setText(h[1]);
+                    } else {
+                        tensionTr.setVisibility(View.GONE);
+                    }
                     break;
                 case "Cluster-Kopfschmerzen":
-                    pieChart.addPieSlice(
-                            new PieModel(
-                                    h[0],
-                                    (float) Double.parseDouble(h[1]),
-                                    Color.parseColor("#EF5350")));
+                    if (Double.parseDouble(h[1]) > 0) {
+                        clusterTr.setVisibility(View.VISIBLE);
+
+                        pieChart.addPieSlice(
+                                new PieModel(
+                                        h[0],
+                                        (float) Double.parseDouble(h[1]),
+                                        Color.parseColor("#D3D3D3")));
+
+                        tv3.setText(h[1]);
+                    } else {
+                        clusterTr.setVisibility(View.GONE);
+                    }
                     break;
                 case "Sinusitis-Kopfschmerzen":
-                    pieChart.addPieSlice(
-                            new PieModel(
-                                    h[0],
-                                    (float) Double.parseDouble(h[1]),
-                                    Color.parseColor("#29B6F6")));
+                    if (Double.parseDouble(h[1]) > 0) {
+                        sinusTr.setVisibility(View.VISIBLE);
+
+                        pieChart.addPieSlice(
+                                new PieModel(
+                                        h[0],
+                                        (float) Double.parseDouble(h[1]),
+                                        Color.parseColor("#FF000000")));
+
+                        tv4.setText(h[1]);
+                    } else {
+                        sinusTr.setVisibility(View.GONE);
+                    }
                     break;
                 case "Sonstige Kopfschmerzen":
-                    pieChart.addPieSlice(
-                            new PieModel(
-                                    h[0],
-                                    (float) Double.parseDouble(h[1]),
-                                    Color.parseColor("#1BC122")));
+                    if (Double.parseDouble(h[1]) > 0) {
+                        otherTr.setVisibility(View.VISIBLE);
+
+                        pieChart.addPieSlice(
+                                new PieModel(
+                                        h[0],
+                                        (float) Double.parseDouble(h[1]),
+                                        Color.parseColor("#FF9800")));
+
+                        tv5.setText(h[1]);
+                    } else {
+                        otherTr.setVisibility(View.GONE);
+                    }
                     break;
             }
         });

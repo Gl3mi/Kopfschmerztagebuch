@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -40,7 +39,7 @@
                     android:id="@+id/piechart"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
-                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
                     android:layout_weight="1"
@@ -54,11 +53,12 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight=".2">
 
                 <TableRow
+                    android:id="@+id/migraeneTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp">
@@ -75,12 +75,12 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/migraeneTv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:text="Python"
                         android:textSize="15sp" />
 
                     <TextView
@@ -98,6 +98,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/tensionTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp">
@@ -114,12 +115,12 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/tensionTv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:text="Python"
                         android:textSize="15sp" />
 
                     <TextView
@@ -137,6 +138,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/clusterTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp">
@@ -153,12 +155,12 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/clusterTv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:text="Python"
                         android:textSize="15sp" />
 
                     <TextView
@@ -176,6 +178,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/sinusTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp">
@@ -192,12 +195,12 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/sinusTv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:text="Python"
                         android:textSize="15sp" />
 
                     <TextView
@@ -215,6 +218,7 @@
                 </TableRow>
 
                 <TableRow
+                    android:id="@+id/otherTr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
@@ -230,12 +234,12 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/otherTv"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
                         android:layout_weight="1"
                         android:fontFamily="sans-serif-light"
-                        android:text="Python"
                         android:textSize="15sp" />
 
                     <TextView
