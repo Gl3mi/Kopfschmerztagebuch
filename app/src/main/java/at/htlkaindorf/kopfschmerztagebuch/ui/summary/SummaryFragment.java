@@ -33,10 +33,10 @@ public class SummaryFragment extends Fragment {
         Analyse analyse = new Analyse(requireContext());
         analysis = analyse.createAnalysis();
 
-        TextView tvR = binding.tvR;
-        TextView tvPython = binding.tvPython;
-        TextView tvCPP = binding.tvCPP;
-        TextView tvJava = binding.tvJava;
+        TextView tvR = binding.tv1;
+        TextView tvPython = binding.tv2;
+        TextView tvCPP = binding.tv3;
+        TextView tvJava = binding.tv4;
         PieChart pieChart = binding.piechart;
 
         analysis.getPercentage().forEach(s -> {
