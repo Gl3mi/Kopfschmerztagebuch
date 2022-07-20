@@ -121,7 +121,7 @@ public class CalendarFragment extends Fragment {
                 medics.setText(entry.getMedics());
                 duration.setText(builder);
 
-            } catch (NoSuchElementException | IllegalArgumentException e) {
+            } catch (NoSuchElementException | IllegalArgumentException | NullPointerException e) {
                 e.printStackTrace();
                 kindOfPain.setText("-");
                 painArea.setText("-");

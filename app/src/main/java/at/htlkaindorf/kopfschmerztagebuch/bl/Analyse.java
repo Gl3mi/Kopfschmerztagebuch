@@ -14,7 +14,7 @@ import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 
 public class Analyse {
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : mm");
-    private final List<Entry> entries;
+    private List<Entry> entries;
     private double averageIntensity = 0;
     private String medics = null;
     private final double[] countKindOfPain = new double[5];
@@ -26,7 +26,12 @@ public class Analyse {
     public Analyse(Context context) {
         Session session = new Session(context);
         this.entries = session.getEntries("data");
-        averageDuration = new double[entries.size()];
+
+        if (entries == null) {
+            entries = new ArrayList<>();
+        }
+
+        this.averageDuration = new double[entries.size()];
     }
 
     public Analysis createAnalysis() {
@@ -59,7 +64,7 @@ public class Analyse {
 
             String[] painArea = entry.getPainArea().split("-");
 
-            switch (Integer.parseInt(painArea[0])){
+            switch (Integer.parseInt(painArea[0])) {
                 case 1:
                     countArea[0]++;
                     break;
@@ -105,7 +110,6 @@ public class Analyse {
                 averageDuration[count++] = Double.parseDouble(builder.toString()) / 60;
             }
         });
-
 
 
         percentage.add("Migräne;" + countKindOfPain[0] / Arrays.stream(countKindOfPain).sum() * 100);
