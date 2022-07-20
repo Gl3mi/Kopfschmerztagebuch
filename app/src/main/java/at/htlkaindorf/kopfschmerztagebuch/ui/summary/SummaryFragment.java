@@ -1,5 +1,6 @@
 package at.htlkaindorf.kopfschmerztagebuch.ui.summary;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,61 +10,79 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
+import at.htlkaindorf.kopfschmerztagebuch.beans.Analysis;
+import at.htlkaindorf.kopfschmerztagebuch.bl.Analyse;
 import at.htlkaindorf.kopfschmerztagebuch.databinding.FragmentSummaryBinding;
 
 public class SummaryFragment extends Fragment {
 
     private FragmentSummaryBinding binding;
-    TextView tvR, tvPython, tvCPP, tvJava;
-    PieChart pieChart;
+    private Analysis analysis;
 
+    @SuppressLint("SetTextI18n")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SummaryViewModel summaryViewModel =
-                new ViewModelProvider(this).get(SummaryViewModel.class);
 
         binding = FragmentSummaryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        tvR = binding.tvR;
-        tvPython = binding.tvPython;
-        tvCPP = binding.tvCPP;
-        tvJava = binding.tvJava;
-        pieChart = binding.piechart;
+        Analyse analyse = new Analyse(requireContext());
+        analysis = analyse.createAnalysis();
 
-        tvPython.setText(Integer.toString(40));
-        tvCPP.setText(Integer.toString(10));
-        tvJava.setText(Integer.toString(50));
+        TextView tvR = binding.tvR;
+        TextView tvPython = binding.tvPython;
+        TextView tvCPP = binding.tvCPP;
+        TextView tvJava = binding.tvJava;
+        PieChart pieChart = binding.piechart;
 
-        pieChart.addPieSlice(
-                new PieModel(
-                        "R",
-                        Integer.parseInt(tvR.getText().toString()),
-                        Color.parseColor("#FFA726")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Python",
-                        Integer.parseInt(tvPython.getText().toString()),
-                        Color.parseColor("#66BB6A")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "C++",
-                        Integer.parseInt(tvCPP.getText().toString()),
-                        Color.parseColor("#EF5350")));
-        pieChart.addPieSlice(
-                new PieModel(
-                        "Java",
-                        Integer.parseInt(tvJava.getText().toString()),
-                        Color.parseColor("#29B6F6")));
+        analysis.getPercentage().forEach(s -> {
+            String[] h = s.split(";");
+
+            switch (h[0]) {
+                case "Migräne":
+                    pieChart.addPieSlice(
+                            new PieModel(
+                                    h[0],
+                                    (float) Double.parseDouble(h[1]),
+                                    Color.parseColor("#FFA726")));
+                    break;
+                case "Spannungskopfschmerzen":
+                    pieChart.addPieSlice(
+                            new PieModel(
+                                    h[0],
+                                    (float) Double.parseDouble(h[1]),
+                                    Color.parseColor("#66BB6A")));
+                    break;
+                case "Cluster-Kopfschmerzen":
+                    pieChart.addPieSlice(
+                            new PieModel(
+                                    h[0],
+                                    (float) Double.parseDouble(h[1]),
+                                    Color.parseColor("#EF5350")));
+                    break;
+                case "Sinusitis-Kopfschmerzen":
+                    pieChart.addPieSlice(
+                            new PieModel(
+                                    h[0],
+                                    (float) Double.parseDouble(h[1]),
+                                    Color.parseColor("#29B6F6")));
+                    break;
+                case "Sonstige Kopfschmerzen":
+                    pieChart.addPieSlice(
+                            new PieModel(
+                                    h[0],
+                                    (float) Double.parseDouble(h[1]),
+                                    Color.parseColor("#1BC122")));
+                    break;
+            }
+        });
 
         pieChart.startAnimation();
-        //final TextView textView = binding.textView;
-        //summaryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
         return root;
     }
 
