@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Analysis {
     private final String commonArea;
-    private final String averageDuration;
+    private final double averageDuration;
     private final int numberOfOccurrences;
     private final int streak;
     private final double averageIntensity;
@@ -12,7 +12,7 @@ public class Analysis {
     private final int painless;
     private final List<String> percentage;
 
-    public Analysis(String commonArea, String averageDuration, int numberOfOccurrences, int streak, double averageIntensity, String medics, List<String> percentage, int painless) {
+    public Analysis(String commonArea, double averageDuration, int numberOfOccurrences, int streak, double averageIntensity, String medics, List<String> percentage, int painless) {
         this.commonArea = commonArea;
         this.averageDuration = averageDuration;
         this.numberOfOccurrences = numberOfOccurrences;
@@ -31,7 +31,7 @@ public class Analysis {
         return commonArea;
     }
 
-    public String getAverageDuration() {
+    public double getAverageDuration() {
         return averageDuration;
     }
 

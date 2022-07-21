@@ -20,9 +20,12 @@ import com.google.gson.Gson;
 
 import org.jetbrains.annotations.Contract;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Locale;
 
 import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
@@ -73,6 +76,8 @@ public class EntryActivity extends AppCompatActivity {
 
     private final String[] painAreaList = {"1-Oben", "2-Stirn", "3-Hinterkopf", "4-Wange L",
             "5-Wange R", "6-Schläfe L", "7-Schläfe R", "8-Augenbereich L", "9-Augenbereich R"};
+
+    private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd LLL yyyy", Locale.GERMAN);
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -159,6 +164,9 @@ public class EntryActivity extends AppCompatActivity {
                         String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), medic);
 
                 entries.add(entry);
+
+                entries.sort((o1, o2) -> LocalDate.parse(o2.getDate(), dateFormatter)
+                        .compareTo(LocalDate.parse(o1.getDate(), dateFormatter)));
 
                 String json = gson.toJson(entries);
                 session.getEditor().putString("data", json).apply();

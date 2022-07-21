@@ -152,7 +152,7 @@
                         <View
                             android:layout_width="15dp"
                             android:layout_height="match_parent"
-                            android:background="@color/gray" />
+                            android:background="@color/teal_700" />
                     </LinearLayout>
 
                     <TextView
@@ -289,7 +289,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2.5"
                     android:background="@drawable/rounded_corners2"
                     android:padding="5dp"
                     android:text="@string/most_area"
@@ -300,7 +300,7 @@
                     android:id="@+id/commonArea"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
             </TableRow>
@@ -314,7 +314,7 @@
                     android:id="@+id/textView5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2.5"
                     android:background="@drawable/rounded_corners3"
                     android:padding="5dp"
                     android:text="@string/average_duration"
@@ -325,7 +325,7 @@
                     android:id="@+id/averageDuration"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
             </TableRow>
@@ -339,7 +339,7 @@
                     android:id="@+id/textView7"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2.5"
                     android:background="@drawable/rounded_corners2"
                     android:padding="5dp"
                     android:text="@string/number_happened"
@@ -350,7 +350,7 @@
                     android:id="@+id/numberOfOccurrences"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
             </TableRow>
@@ -364,7 +364,7 @@
                     android:id="@+id/textView9"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2.5"
                     android:background="@drawable/rounded_corners3"
                     android:padding="5dp"
                     android:text="@string/highest_streak"
@@ -375,7 +375,7 @@
                     android:id="@+id/streak"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
 
@@ -390,7 +390,7 @@
                     android:id="@+id/textView11"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2.5"
                     android:background="@drawable/rounded_corners2"
                     android:padding="5dp"
                     android:text="@string/average_intensity"
@@ -401,7 +401,7 @@
                     android:id="@+id/averageIntensity"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
             </TableRow>
@@ -415,7 +415,7 @@
                     android:id="@+id/textView13"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2.5"
                     android:background="@drawable/rounded_corners3"
                     android:padding="5dp"
                     android:text="@string/medics"
@@ -426,7 +426,7 @@
                     android:id="@+id/medics"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
+                    android:layout_weight="2"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
             </TableRow>

@@ -67,10 +67,10 @@ public class SummaryFragment extends Fragment {
         otherTv.setText("Sonstige-\nKopfschmerzen");
 
         commonArea.setText(analysis.getCommonArea());
-        averageDuration.setText(analysis.getAverageDuration());
+        averageDuration.setText(String.format("%.2f", analysis.getAverageDuration()));
         numberOfOccurrences.setText(analysis.getNumberOfOccurrences() + "");
         streak.setText(analysis.getStreak() + "");
-        averageIntensity.setText(analysis.getAverageIntensity() + "");
+        averageIntensity.setText(String.format("%.1f", analysis.getAverageIntensity()));
         medics.setText(analysis.getMedics());
 
         if (analysis.getPainless() != 0) {
@@ -129,7 +129,7 @@ public class SummaryFragment extends Fragment {
                                 new PieModel(
                                         h[0],
                                         (float) Double.parseDouble(h[1]),
-                                        Color.parseColor("#D3D3D3")));
+                                        Color.parseColor("#FF018786")));
 
                         tv3.setText(String.format("%.1f", Double.parseDouble(h[1])));
                     } else {
