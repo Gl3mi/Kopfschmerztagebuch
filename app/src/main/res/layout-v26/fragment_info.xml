@@ -1,28 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ui.info.InfoFragment"
-    android:theme="@style/Theme.MaterialComponents.NoActionBar">
+    android:theme="@style/Theme.MaterialComponents.NoActionBar"
+    tools:context=".ui.info.InfoFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#CFCECE"
-        tools:ignore="UselessParent">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingBottom="20dp"
-            tools:ignore="UselessParent">
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        tools:ignore="UselessParent"
+        android:background="#CFCECE">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -30,12 +25,12 @@
                     android:id="@+id/legend_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_corners"
                     android:text="@string/legend"
                     android:textAlignment="center"
-                    app:backgroundTint="@color/purple_700"
-                    android:background="@drawable/rounded_corners"
                     android:textColor="@color/white"
-                    android:textSize="50sp" />
+                    android:textSize="35sp"
+                    app:backgroundTint="@color/purple_700" />
 
                 <TextView
                     android:id="@+id/legend_tf"
@@ -48,19 +43,20 @@
                     android:textColor="@color/black"
                     android:textSize="17sp"
                     android:visibility="gone"
-                    tools:ignore="ObsoleteLayoutParam" />
+                    tools:ignore="ObsoleteLayoutParam">
+                </TextView>
 
                 <Button
                     android:id="@+id/migraine_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/migraine"
-                    android:layout_marginTop="15dp"
-                    android:textAlignment="center"
-                    app:backgroundTint="@color/blue"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_corners"
+                    android:text="@string/migraine"
+                    android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="50sp" />
+                    android:textSize="35sp"
+                    app:backgroundTint="@color/blue" />
 
                 <TextView
                     android:id="@+id/migraine_tf"
@@ -68,12 +64,12 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
+                    android:hyphenationFrequency="none"
+                    android:justificationMode="inter_word"
                     android:padding="30dp"
                     android:text="@string/migraine_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:hyphenationFrequency="none"
-                    android:justificationMode="inter_word"
                     android:visibility="gone"
                     tools:ignore="ObsoleteLayoutParam" />
 
@@ -81,107 +77,105 @@
                     android:id="@+id/tension_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    app:backgroundTint="@color/blue"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_corners"
                     android:text="@string/tension"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    app:backgroundTint="@color/blue" />
 
                 <TextView
                     android:id="@+id/tension_tf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:hyphenationFrequency="none"
+                    android:justificationMode="inter_word"
                     android:padding="30dp"
                     android:text="@string/tension_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:hyphenationFrequency="none"
-                    android:justificationMode="inter_word"
                     android:visibility="gone" />
 
                 <Button
                     android:id="@+id/cluster_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    app:backgroundTint="@color/blue"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_corners"
                     android:text="@string/cluster"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    app:backgroundTint="@color/blue" />
 
                 <TextView
                     android:id="@+id/cluster_tf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:hyphenationFrequency="none"
+                    android:justificationMode="inter_word"
                     android:padding="30dp"
                     android:text="@string/cluster_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:hyphenationFrequency="none"
-                    android:justificationMode="inter_word"
                     android:visibility="gone" />
 
                 <Button
                     android:id="@+id/sinus_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    app:backgroundTint="@color/blue"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_corners"
                     android:text="@string/sinus"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    app:backgroundTint="@color/blue" />
 
                 <TextView
                     android:id="@+id/sinus_tf"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:hyphenationFrequency="none"
+                    android:justificationMode="inter_word"
                     android:padding="30dp"
                     android:text="@string/sinus_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:hyphenationFrequency="none"
-                    android:justificationMode="inter_word"
                     android:visibility="gone" />
 
                 <Button
                     android:id="@+id/moreInfo_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="20dp"
-                    app:backgroundTint="#3F51B5"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_corners"
                     android:text="@string/more_info"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="30sp" />
+                    android:textSize="20sp"
+                    app:backgroundTint="#3F51B5"/>
 
                 <TextView
                     android:id="@+id/moreInfo_links"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="40dp"
                     android:autoLink="web"
                     android:linksClickable="true"
                     android:text="@string/links"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:layout_marginTop="10dp"
                     android:textColorLink="#008EFF"
                     android:textSize="15sp"
                     android:visibility="gone"
                     tools:ignore="RtlSymmetry" />
             </LinearLayout>
-        </ScrollView>
-    </RelativeLayout>
+    </ScrollView>
 
 </LinearLayout>
