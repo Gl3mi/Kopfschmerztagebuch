@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
+import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Analysis;
 import at.htlkaindorf.kopfschmerztagebuch.bl.Analyse;
 import at.htlkaindorf.kopfschmerztagebuch.databinding.FragmentSummaryBinding;
@@ -22,22 +23,20 @@ import at.htlkaindorf.kopfschmerztagebuch.databinding.FragmentSummaryBinding;
 public class SummaryFragment extends Fragment {
 
     private FragmentSummaryBinding binding;
-    private Analysis analysis;
-    TextView tv1;
-    TextView tv2;
-    TextView tv3;
-    TextView tv4;
-    TextView tv5;
+    private TextView tv1;
+    private TextView tv2;
+    private TextView tv3;
+    private TextView tv4;
+    private TextView tv5;
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "DefaultLocale"})
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         binding = FragmentSummaryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        Analyse analyse = new Analyse(requireContext());
-        analysis = analyse.createAnalysis();
+        TextView message = binding.message;
 
         TextView migraeneTv = binding.migraeneTv;
         TextView tensionTv = binding.tensionTv;
@@ -45,17 +44,41 @@ public class SummaryFragment extends Fragment {
         TextView sinusTv = binding.sinusTv;
         TextView otherTv = binding.otherTv;
 
+        TextView commonArea = binding.commonArea;
+        TextView averageDuration = binding.averageDuration;
+        TextView numberOfOccurrences = binding.numberOfOccurrences;
+        TextView streak = binding.streak;
+        TextView averageIntensity = binding.averageIntensity;
+        TextView medics = binding.medics;
+
         TableRow sinusTr = binding.sinusTr;
         TableRow clusterTr = binding.clusterTr;
         TableRow tensionTr = binding.tensionTr;
         TableRow migraeneTr = binding.migraeneTr;
         TableRow otherTr = binding.otherTr;
 
+        Analyse analyse = new Analyse(requireContext());
+        Analysis analysis = analyse.createAnalysis();
+
         migraeneTv.setText("Migräne");
         tensionTv.setText("Spannungs-\nkopfschmerzen");
         clusterTv.setText("Cluster-\nKopfschmerzen");
         sinusTv.setText("Sinusitis-\nKopfschmerzen");
         otherTv.setText("Sonstige-\nKopfschmerzen");
+
+        commonArea.setText(analysis.getCommonArea());
+        averageDuration.setText(analysis.getAverageDuration());
+        numberOfOccurrences.setText(analysis.getNumberOfOccurrences() + "");
+        streak.setText(analysis.getStreak() + "");
+        averageIntensity.setText(analysis.getAverageIntensity() + "");
+        medics.setText(analysis.getMedics());
+
+        if (analysis.getPainless() != 0) {
+            message.setText(getString(R.string.painless, analysis.getPainless()));
+            message.setVisibility(View.VISIBLE);
+        } else {
+            message.setVisibility(View.INVISIBLE);
+        }
 
         tv1 = binding.tv1;
         tv2 = binding.tv2;
@@ -78,7 +101,7 @@ public class SummaryFragment extends Fragment {
                                         (float) Double.parseDouble(h[1]),
                                         Color.parseColor("#2196F3")));
 
-                        tv1.setText(h[1]);
+                        tv1.setText(String.format("%.1f", Double.parseDouble(h[1])));
                     } else {
                         migraeneTr.setVisibility(View.GONE);
                     }
@@ -93,7 +116,7 @@ public class SummaryFragment extends Fragment {
                                         (float) Double.parseDouble(h[1]),
                                         Color.parseColor("#FF0000")));
 
-                        tv2.setText(h[1]);
+                        tv2.setText(String.format("%.1f", Double.parseDouble(h[1])));
                     } else {
                         tensionTr.setVisibility(View.GONE);
                     }
@@ -108,7 +131,7 @@ public class SummaryFragment extends Fragment {
                                         (float) Double.parseDouble(h[1]),
                                         Color.parseColor("#D3D3D3")));
 
-                        tv3.setText(h[1]);
+                        tv3.setText(String.format("%.1f", Double.parseDouble(h[1])));
                     } else {
                         clusterTr.setVisibility(View.GONE);
                     }
@@ -123,7 +146,7 @@ public class SummaryFragment extends Fragment {
                                         (float) Double.parseDouble(h[1]),
                                         Color.parseColor("#FF000000")));
 
-                        tv4.setText(h[1]);
+                        tv4.setText(String.format("%.1f", Double.parseDouble(h[1])));
                     } else {
                         sinusTr.setVisibility(View.GONE);
                     }
@@ -138,7 +161,7 @@ public class SummaryFragment extends Fragment {
                                         (float) Double.parseDouble(h[1]),
                                         Color.parseColor("#FF9800")));
 
-                        tv5.setText(h[1]);
+                        tv5.setText(String.format("%.1f", Double.parseDouble(h[1])));
                     } else {
                         otherTr.setVisibility(View.GONE);
                     }

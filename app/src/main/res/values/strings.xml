@@ -89,4 +89,6 @@
         keine eingenommenen Medikamente \n \nHINZUFÜGEN-EINTRAG \nRot markierte
         Plfichtfelder \nIntensität der Schmerzen: \n Hellgrün —> Sehr leicht \n Grün —>
         Leicht \n Orange —> Mittel \n Rot —> Stark \n Dunkelrot —> Sehr stark</string>
+    <string name="analysis">Monatliche Analyse</string>
+    <string name="painless">Hurra, du bist schon seit %d Tag(en) schmerzlos!</string>
 </resources>
