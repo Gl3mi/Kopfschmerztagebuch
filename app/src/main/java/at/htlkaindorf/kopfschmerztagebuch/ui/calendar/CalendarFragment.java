@@ -9,6 +9,7 @@ import android.widget.CalendarView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import java.time.LocalTime;
@@ -19,6 +20,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.NoSuchElementException;
 
+import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 import at.htlkaindorf.kopfschmerztagebuch.bl.Session;
 import at.htlkaindorf.kopfschmerztagebuch.databinding.FragmentCalendarBinding;
@@ -30,7 +32,7 @@ public class CalendarFragment extends Fragment {
     private List<Entry> entries = new ArrayList<>();
     private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH : mm");
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint({"SetTextI18n", "ResourceAsColor"})
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -117,12 +119,36 @@ public class CalendarFragment extends Fragment {
 
                 kindOfPain.setText(entry.getKindOfPain());
                 painArea.setText(entry.getPainArea());
-                intensity.setText(entry.getIntensity() + "");
+                intensity.setText(String.valueOf(entry.getIntensity()));
                 medics.setText(entry.getMedics());
                 duration.setText(builder);
 
+                switch (Integer.parseInt(String.valueOf(intensity.getText()))) {
+                    case 1:
+                        chosenDate.setTextColor(ContextCompat.getColor(requireContext(),
+                                R.color.intensity1));
+                        break;
+                    case 2:
+                        chosenDate.setTextColor(ContextCompat.getColor(requireContext(),
+                                R.color.intensity2));
+                        break;
+                    case 3:
+                        chosenDate.setTextColor(ContextCompat.getColor(requireContext(),
+                                R.color.intensity3));
+                        break;
+                    case 4:
+                        chosenDate.setTextColor(ContextCompat.getColor(requireContext(),
+                                R.color.intensity4));
+                        break;
+                    case 5:
+                        chosenDate.setTextColor(ContextCompat.getColor(requireContext(),
+                                R.color.intensity5));
+                        break;
+                }
+
             } catch (NoSuchElementException | IllegalArgumentException | NullPointerException e) {
                 e.printStackTrace();
+                chosenDate.setTextColor(ContextCompat.getColor(requireContext(), R.color.blue));
                 kindOfPain.setText("-");
                 painArea.setText("-");
                 intensity.setText("-");
