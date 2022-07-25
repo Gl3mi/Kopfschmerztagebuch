@@ -91,4 +91,52 @@
         Leicht \n Orange —> Mittel \n Rot —> Stark \n Dunkelrot —> Sehr stark</string>
     <string name="analysis">Monatliche Analyse</string>
     <string name="painless">Hurra, du bist schon seit %d Tag(en) schmerzlos!</string>
+    <string name="my_html">
+    <![CDATA[
+        <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+</head>
+
+<body>
+
+    <div>
+        <h2 style="color:green">KALENDER</h2>
+        <p>Klick auf das Datum und eine Mini-Zusammenfassung
+            erscheint, wenn Datum Eintrag besitzt
+        </p>
+        <br>
+        <h2>HINZUFÜGEN-LISTE</h2>
+        <p>Eintrag kann durch das Plus
+            hinzugefügt werden oder durch nach links
+            Wischen gelöscht werden.
+        <ul>
+            <li>Gefüllte Pille —> Medikamente wurden eingenommen</li>
+            <li>Leere Pille    —> keine eingenommenen Medikamente</li>
+        </ul>
+        </p>
+        <br>
+        <h2>HINZUFÜGEN-EINTRAG</h2>
+        <p><span>Rot markierte Plfichtfelder</span> <br>
+            <span>Intensität der Schmerzen:</span>
+        <ul>
+            <li style="color:#74DF00">Hellgrün  —> Sehr leicht</li>
+            <li style="color:#04B404">Grün      —> Leicht</li>
+            <li style="color:#FF8000">Orange    —> Mittel</li>
+            <li style="color:red">Rot       —> Stark</li>
+            <li style="color:#B40404">Dunkelrot —> Sehr stark</li>
+        </ul>
+        </p>
+    </div>
+</body>
+
+</html>
+    ]]>
+</string>
 </resources>

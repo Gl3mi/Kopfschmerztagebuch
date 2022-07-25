@@ -1,6 +1,7 @@
 package at.htlkaindorf.kopfschmerztagebuch.ui.info;
 
 import android.os.Bundle;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.databinding.FragmentInfoBinding;
 
 public class InfoFragment extends Fragment {
@@ -26,6 +28,10 @@ public class InfoFragment extends Fragment {
         TextView sinusT = binding.sinusTf;
         TextView infoT = binding.moreInfoLinks;
         TextView legendT = binding.legendTf;
+
+        legendT.setText(Html.fromHtml(getResources().getString(R.string.my_html), Html.FROM_HTML_SEPARATOR_LINE_BREAK_LIST_ITEM));
+
+
 
         Button legendBtn = binding.legendHeader;
         Button migraineBtn = binding.migraineHeader;
