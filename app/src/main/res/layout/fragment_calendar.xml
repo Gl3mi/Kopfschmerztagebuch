@@ -9,13 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/gray"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="@drawable/myrectcal"
+            android:elevation="@dimen/cardview_default_radius">y
 
             <TextView
                 android:id="@+id/date"
@@ -190,15 +192,15 @@
             android:id="@+id/calendarView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
-            android:background="@color/cardview_light_background"
+            android:layout_marginTop="5dp"
             android:dateTextAppearance="@style/CalenderViewDateCustomText"
             android:theme="@style/CalenderViewCustom"
             android:weekDayTextAppearance="@style/CalenderViewWeekCustomText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewRealizarReserva"
-
+            android:background="@drawable/myrect"
+            android:elevation="@dimen/cardview_default_radius"
             />
     </LinearLayout>
 
