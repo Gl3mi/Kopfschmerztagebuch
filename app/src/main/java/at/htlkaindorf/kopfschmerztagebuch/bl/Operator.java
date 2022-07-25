@@ -1,9 +1,11 @@
 package at.htlkaindorf.kopfschmerztagebuch.bl;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -34,6 +36,16 @@ public class Operator implements View.OnClickListener {
     public void onClick(View v) {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
 
+        ImageView image = new ImageView(v.getContext());
+        image.setImageResource(R.drawable.koepfe);
+        image.setScaleX(0.5f);
+        image.setScaleY(0.5f);
+
+        Toast toast = new Toast(context);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(image);
+
         // set dialog non cancelable
         builder.setCancelable(false);
 
@@ -46,11 +58,6 @@ public class Operator implements View.OnClickListener {
         } else {
             if (check.equals("painArea")) {
                 builder.setTitle("Schmerzbereich");
-                ImageView image = new ImageView(v.getContext());
-                image.setImageResource(R.mipmap.ic_koepfe);
-                image.setScaleX(3f);
-                image.setScaleY(3f);
-                builder.setView(image);
             } else {
                 builder.setTitle("Beigleitsymptome");
             }
@@ -58,6 +65,7 @@ public class Operator implements View.OnClickListener {
                 if (isChecked) {
                     langList.add(which);
                     Collections.sort(langList);
+                    toast.show();
                 } else {
                     langList.remove(Integer.valueOf(which));
                 }

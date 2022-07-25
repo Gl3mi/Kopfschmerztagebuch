@@ -16,8 +16,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.Gson;
-
 import org.jetbrains.annotations.Contract;
 
 import java.time.LocalDate;
@@ -34,6 +32,7 @@ import at.htlkaindorf.kopfschmerztagebuch.bl.Session;
 
 public class EntryActivity extends AppCompatActivity {
     private List<Entry> entries = new ArrayList<>();
+    private Entry entry;
     private Session session;
 
     private int intensity = 0;
@@ -145,20 +144,77 @@ public class EntryActivity extends AppCompatActivity {
             medics.setText(intent.getStringExtra("medics"));
             symptoms.setText(intent.getStringExtra("symptoms"));
             comment.setText(intent.getStringExtra("comment"));
+
+            switch (Integer.parseInt(intent.getStringExtra("intensity"))) {
+                case 1:
+                    intensity = 1;
+                    intensity1.setChecked(true);
+                    intensity1.setBackgroundResource(R.drawable.smiley);
+                    break;
+                case 2:
+                    intensity = 2;
+                    intensity2.setChecked(true);
+                    intensity2.setBackgroundResource(R.drawable.smiley);
+                    break;
+                case 3:
+                    intensity = 3;
+                    intensity3.setChecked(true);
+                    intensity3.setBackgroundResource(R.drawable.smiley);
+                    break;
+                case 4:
+                    intensity = 4;
+                    intensity4.setChecked(true);
+                    intensity4.setBackgroundResource(R.drawable.smiley);
+                    break;
+                case 5:
+                    intensity = 5;
+                    intensity5.setChecked(true);
+                    intensity5.setBackgroundResource(R.drawable.smiley);
+                    break;
+            }
+
+            boolean medic = !String.valueOf(medics.getText()).equals("");
+
+            entry = new Entry(intent.getStringExtra("kindOfPain"),
+                    intent.getStringExtra("painArea"),
+                    Integer.parseInt(intent.getStringExtra("intensity")),
+                    intent.getStringExtra("from"), intent.getStringExtra("to"),
+                    intent.getStringExtra("date"), intent.getStringExtra("medics"),
+                    intent.getStringExtra("symptoms"), intent.getStringExtra("comment"),
+                    medic);
         }
 
         add.setOnClickListener(view -> {
             if (kindOfPain.getText().equals("") || painArea.getText().equals("") || intensity == 0) {
                 Toast.makeText(this, "Es wurden nicht alle Pflichtfelder ausgefüllt!",
                         Toast.LENGTH_SHORT).show();
+            } else if (entries.contains(entry)) {
+                boolean medic = !String.valueOf(medics.getText()).equals("");
+
+                entry = entries.get(entries.indexOf(entry));
+
+                entry.setKindOfPain(String.valueOf(kindOfPain.getText()));
+                entry.setPainArea(String.valueOf(painArea.getText()));
+                entry.setIntensity(intensity);
+                entry.setFrom(String.valueOf(timeButtonFrom.getText()));
+                entry.setTo(String.valueOf(timeButtonTo.getText()));
+                entry.setDate(String.valueOf(dateButton.getText()));
+                entry.setMedics(String.valueOf(medics.getText()));
+                entry.setAttendantSymptoms(String.valueOf(symptoms.getText()));
+                entry.setComment(String.valueOf(comment.getText()));
+                entry.setCheckMedic(medic);
+
+                session.getEditor().clear().apply();
+                session.putString(entries);
+
+                super.onBackPressed();
             } else if (checkDate()) {
                 Toast.makeText(this, "Eintrag mit dem Datum schon vorhanden!",
                         Toast.LENGTH_SHORT).show();
             } else {
                 boolean medic = !String.valueOf(medics.getText()).equals("");
-                Gson gson = new Gson();
 
-                Entry entry = new Entry(String.valueOf(kindOfPain.getText()),
+                entry = new Entry(String.valueOf(kindOfPain.getText()),
                         String.valueOf(painArea.getText()), intensity, chosenFrom, chosenTo,
                         chosenDate, String.valueOf(medics.getText()),
                         String.valueOf(symptoms.getText()), String.valueOf(comment.getText()), medic);
@@ -168,8 +224,7 @@ public class EntryActivity extends AppCompatActivity {
                 entries.sort((o1, o2) -> LocalDate.parse(o2.getDate(), dateFormatter)
                         .compareTo(LocalDate.parse(o1.getDate(), dateFormatter)));
 
-                String json = gson.toJson(entries);
-                session.getEditor().putString("data", json).apply();
+                session.putString(entries);
 
                 super.onBackPressed();
             }
@@ -199,7 +254,7 @@ public class EntryActivity extends AppCompatActivity {
                 if (checked) {
                     intensity = 2;
                     intensity1.setBackgroundColor(Color.WHITE);
-                    intensity2.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity2.setBackgroundResource(R.drawable.smiley);
                     intensity3.setBackgroundColor(Color.WHITE);
                     intensity4.setBackgroundColor(Color.WHITE);
                     intensity5.setBackgroundColor(Color.WHITE);
@@ -210,7 +265,7 @@ public class EntryActivity extends AppCompatActivity {
                     intensity = 3;
                     intensity1.setBackgroundColor(Color.WHITE);
                     intensity2.setBackgroundColor(Color.WHITE);
-                    intensity3.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity3.setBackgroundResource(R.drawable.smiley);
                     intensity4.setBackgroundColor(Color.WHITE);
                     intensity5.setBackgroundColor(Color.WHITE);
                 }
@@ -221,7 +276,7 @@ public class EntryActivity extends AppCompatActivity {
                     intensity1.setBackgroundColor(Color.WHITE);
                     intensity2.setBackgroundColor(Color.WHITE);
                     intensity3.setBackgroundColor(Color.WHITE);
-                    intensity4.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity4.setBackgroundResource(R.drawable.smiley);
                     intensity5.setBackgroundColor(Color.WHITE);
                 }
                 break;
@@ -232,7 +287,7 @@ public class EntryActivity extends AppCompatActivity {
                     intensity2.setBackgroundColor(Color.WHITE);
                     intensity3.setBackgroundColor(Color.WHITE);
                     intensity4.setBackgroundColor(Color.WHITE);
-                    intensity5.setBackgroundResource(R.drawable.rounded_corners);
+                    intensity5.setBackgroundResource(R.drawable.smiley);
                 }
                 break;
         }

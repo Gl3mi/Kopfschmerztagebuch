@@ -15,6 +15,9 @@ import androidx.fragment.app.Fragment;
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.beans.Analysis;
 import at.htlkaindorf.kopfschmerztagebuch.bl.Analyse;
@@ -37,6 +40,7 @@ public class SummaryFragment extends Fragment {
         View root = binding.getRoot();
 
         TextView message = binding.message;
+        TextView header = binding.date;
 
         TextView migraeneTv = binding.migraeneTv;
         TextView tensionTv = binding.tensionTv;
@@ -59,6 +63,8 @@ public class SummaryFragment extends Fragment {
 
         Analyse analyse = new Analyse(requireContext());
         Analysis analysis = analyse.createAnalysis();
+
+        header.setText("(" + LocalDate.now().format(DateTimeFormatter.ofPattern("MMMM.yyyy")) + ")");
 
         migraeneTv.setText("Migräne");
         tensionTv.setText("Spannungs-\nkopfschmerzen");

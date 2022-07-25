@@ -10,7 +10,7 @@
         android:id="@+id/addToList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/add"
+        android:text="@string/add_change"
         app:layout_constraintBottom_toTopOf="@+id/sv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

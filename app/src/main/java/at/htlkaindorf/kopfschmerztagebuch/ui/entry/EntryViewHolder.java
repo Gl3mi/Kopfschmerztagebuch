@@ -71,6 +71,7 @@ public class EntryViewHolder extends RecyclerView.ViewHolder implements View.OnC
         intent.putExtra("to", entry.getTo());
         intent.putExtra("date", entry.getDate());
         intent.putExtra("medics", entry.getMedics());
+        intent.putExtra("intensity", entry.getIntensity() + "");
         intent.putExtra("symptoms", entry.getAttendantSymptoms());
         intent.putExtra("comment", entry.getComment());
 

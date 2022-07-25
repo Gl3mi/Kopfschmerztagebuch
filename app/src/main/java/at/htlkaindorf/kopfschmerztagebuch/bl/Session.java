@@ -25,10 +25,16 @@ public class Session {
         this.editor = sharedPreferences.edit();
     }
 
+    public void putString(List<Entry> entries) {
+        String json = gson.toJson(entries);
+        editor.putString("data", json).apply();
+    }
+
     public List<Entry> getEntries(String key) {
         if (!sharedPreferences.getString(key, " ").equals("")) {
             String json = sharedPreferences.getString(key, " ");
-            Type type = new TypeToken<List<Entry>>(){}.getType();
+            Type type = new TypeToken<List<Entry>>() {
+            }.getType();
 
             return gson.fromJson(json, type);
         } else {

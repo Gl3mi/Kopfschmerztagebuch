@@ -22,16 +22,18 @@ import at.htlkaindorf.kopfschmerztagebuch.beans.Entry;
 public class Analyse {
     private final DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH : mm");
     private final DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd LLL yyyy", Locale.GERMAN);
-    private List<Entry> entries;
-    private double averageIntensity = 0;
-    private String medics = "-";
-    private int count = 0;
-    private final double[] countKindOfPain = new double[5];
-    private final double[] averageDuration;
-    private List<Integer> day = new ArrayList<>();
-    private int numberOfOccurrences = 1;
-    private final List<Integer> test = new ArrayList<>();
 
+    private String medics = "";
+    private int count = 0;
+    private int numberOfOccurrences = 0;
+
+    private double averageIntensity = 0;
+    private final double[] averageDuration;
+    private final double[] countKindOfPain = new double[5];
+
+    private List<Entry> entries;
+    private List<Integer> day = new ArrayList<>();
+    private final List<Integer> commonAreas = new ArrayList<>();
 
     public Analyse(Context context) {
         Session session = new Session(context);
@@ -45,9 +47,9 @@ public class Analyse {
     }
 
     public Analysis createAnalysis() {
-        String commonArea = null;
         int streak = 0;
         int painless = 0;
+        String commonArea = null;
         List<String> percentage = new ArrayList<>();
         Pattern p = Pattern.compile("[+-]?\\d+");
 
@@ -77,12 +79,10 @@ public class Analyse {
                         break;
                 }
 
-                System.out.println(entry.getPainArea());
-
                 Matcher m = p.matcher(entry.getPainArea());
 
                 while (m.find()) {
-                    test.add(Integer.parseInt(entry.getPainArea().substring(m.start(), m.end())));
+                    commonAreas.add(Integer.parseInt(entry.getPainArea().substring(m.start(), m.end())));
                 }
 
                 LocalTime from = LocalTime.parse(entry.getFrom(), timeFormatter);
@@ -94,7 +94,8 @@ public class Analyse {
                     builder.append(from.until(to.minusHours(from.until(to, ChronoUnit.HOURS)),
                             ChronoUnit.MINUTES));
                     String[] splitter = builder.toString().split(";");
-                    averageDuration[count++] = Double.parseDouble(splitter[0]) + Double.parseDouble(splitter[1]) / 60;
+                    averageDuration[count++] = Double.parseDouble(splitter[0]) +
+                            Double.parseDouble(splitter[1]) / 60;
 
                 } else {
                     builder.append(from.until(to, ChronoUnit.MINUTES));
@@ -104,7 +105,7 @@ public class Analyse {
         });
 
         try {
-            switch (mostFrequent(test)) {
+            switch (mostFrequent(commonAreas)) {
                 case 1:
                     commonArea = "1-Oben";
                     break;
@@ -165,13 +166,14 @@ public class Analyse {
                 Arrays.stream(countKindOfPain).sum() * 100);
 
         return new Analysis(commonArea, Arrays.stream(averageDuration).max().orElse(0),
-                numberOfOccurrences - 1, streak,
-                averageIntensity / numberOfOccurrences, medics, percentage, painless);
+                numberOfOccurrences, streak, averageIntensity / numberOfOccurrences,
+                medics, percentage, painless);
     }
 
     public static Integer mostFrequent(List<Integer> list) {
-        if (list == null || list.isEmpty())
+        if (list == null || list.isEmpty()) {
             return null;
+        }
 
         Map<Integer, Integer> counterMap = new HashMap<>();
         Integer maxValue = 0;
