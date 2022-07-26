@@ -165,9 +165,10 @@ public class Analyse {
         percentage.add("Sonstige Kopfschmerzen;" + countKindOfPain[4] /
                 Arrays.stream(countKindOfPain).sum() * 100);
 
+        averageIntensity = numberOfOccurrences == 0 ? 0 : averageIntensity / numberOfOccurrences;
+
         return new Analysis(commonArea, Arrays.stream(averageDuration).max().orElse(0),
-                numberOfOccurrences, streak, averageIntensity / numberOfOccurrences,
-                medics, percentage, painless);
+                numberOfOccurrences, streak, averageIntensity, medics, percentage, painless);
     }
 
     public static Integer mostFrequent(List<Integer> list) {

@@ -117,7 +117,9 @@ public class CalendarFragment extends Fragment {
                     builder.append("0 h ").append(from.until(to, ChronoUnit.MINUTES)).append(" m");
                 }
 
-                kindOfPain.setText(entry.getKindOfPain());
+                String[] pain = entry.getKindOfPain().split("(-)|( )|(sk)");
+
+                kindOfPain.setText(pain[0]);
                 painArea.setText(entry.getPainArea());
                 intensity.setText(String.valueOf(entry.getIntensity()));
                 medics.setText(entry.getMedics());
