@@ -29,9 +29,16 @@ public class InfoFragment extends Fragment {
         TextView infoT = binding.moreInfoLinks;
         TextView legendT = binding.legendTf;
 
-        legendT.setText(Html.fromHtml(getResources().getString(R.string.my_html), Html.FROM_HTML_SEPARATOR_LINE_BREAK_LIST_ITEM));
-
-
+        legendT.setText(Html.fromHtml(getResources().getString(R.string.legend_html),
+                Html.FROM_HTML_SEPARATOR_LINE_BREAK_LIST_ITEM));
+        migraineT.setText(Html.fromHtml(getResources().getString(R.string.migraine_html),
+                Html.FROM_HTML_SEPARATOR_LINE_BREAK_LIST_ITEM));
+        tensionT.setText(Html.fromHtml(getResources().getString(R.string.tension_html),
+                Html.FROM_HTML_SEPARATOR_LINE_BREAK_LIST_ITEM));
+        clusterT.setText(Html.fromHtml(getResources().getString(R.string.cluster_html),
+                Html.FROM_HTML_SEPARATOR_LINE_BREAK_LIST_ITEM));
+        sinusT.setText(Html.fromHtml(getResources().getString(R.string.sinus_html),
+                Html.FROM_HTML_SEPARATOR_LINE_BREAK_LIST_ITEM));
 
         Button legendBtn = binding.legendHeader;
         Button migraineBtn = binding.migraineHeader;
