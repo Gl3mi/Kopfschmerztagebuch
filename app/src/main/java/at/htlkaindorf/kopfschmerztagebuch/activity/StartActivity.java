@@ -33,6 +33,6 @@ public class StartActivity extends AppCompatActivity {
         textView.animate().translationY(2000).setDuration(1000).setStartDelay(5000);
 
         Handler mHandler = new Handler();
-        mHandler.postDelayed(() -> startActivity(intent), 5000L);
+        mHandler.postDelayed(() -> startActivity(intent), 3500L);
     }
 }
