@@ -15,14 +15,21 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/analysis"/>
+            android:layout_below="@id/animationView"
+            android:fontFamily="cursive"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animationView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="370dp"
+            android:layout_centerInParent="true"
             app:layout_constraintDimensionRatio="1:1"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
