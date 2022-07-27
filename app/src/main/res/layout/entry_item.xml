@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/entry_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/intensity1"
     android:layout_marginLeft="15sp"
+    android:layout_marginTop="20dp"
     android:layout_marginRight="15sp"
-    android:id="@+id/entry_item"
-    android:layout_marginTop="20dp">
+    android:background="@drawable/entry_list">
 
     <TextView
         android:id="@+id/date"
@@ -15,24 +15,24 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@color/blue"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/date"
         android:layout_marginStart="18dp"
+        android:layout_toEndOf="@id/date"
         android:textSize="18sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
 
     <ImageView
         android:id="@+id/medic"
         android:layout_width="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"/>
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>

@@ -10,26 +10,26 @@
         android:id="@+id/entryRecycler"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
         android:layout_weight=".2"
         android:background="@drawable/myrect"
-        android:elevation="@dimen/cardview_default_radius"
-        android:layout_margin="5dp"/>
+        android:elevation="@dimen/cardview_default_radius" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight=".8"
         android:orientation="vertical"
         android:paddingEnd="15dp"
-        android:layout_weight=".8"
         tools:ignore="RtlSymmetry">
 
         <ImageButton
             android:id="@+id/add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/blue"
             android:layout_gravity="end"
             android:background="@drawable/rounded_corners"
+            android:backgroundTint="@color/blue"
             android:src="@drawable/ic_baseline_add_24" />
     </LinearLayout>
 

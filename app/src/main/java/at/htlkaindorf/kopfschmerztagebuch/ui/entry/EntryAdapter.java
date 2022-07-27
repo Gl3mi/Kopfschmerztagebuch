@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
@@ -55,6 +56,24 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryViewHolder> {
         holder.getDate().setText(date.getDayOfMonth() + "." + date.getMonthValue());
         holder.setEntry(entry);
 
+        switch (entry.getIntensity()) {
+            case 1:
+                holder.getDate().setTextColor(ContextCompat.getColor(context, R.color.intensity1));
+                break;
+            case 2:
+                holder.getDate().setTextColor(ContextCompat.getColor(context, R.color.intensity2));
+                break;
+            case 3:
+                holder.getDate().setTextColor(ContextCompat.getColor(context, R.color.intensity3));
+                break;
+            case 4:
+                holder.getDate().setTextColor(ContextCompat.getColor(context, R.color.intensity4));
+                break;
+            case 5:
+                holder.getDate().setTextColor(ContextCompat.getColor(context, R.color.intensity5));
+                break;
+        }
+
         if (entry.getCheckMedic()) {
             Picasso.with(context)
                     .load(R.mipmap.ic_full_pill)
@@ -70,7 +89,7 @@ public class EntryAdapter extends RecyclerView.Adapter<EntryViewHolder> {
 
     @Override
     public int getItemCount() {
-        if (entries != null){
+        if (entries != null) {
             return entries.size();
         }
         return 0;

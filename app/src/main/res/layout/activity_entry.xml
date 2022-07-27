@@ -46,14 +46,14 @@
                     android:layout_weight="1"
                     android:gravity="center|start"
                     android:text="@string/typeH"
-                    android:textSize="15sp"
-                    android:textColor="@color/red"/>
+                    android:textColor="@color/red"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/kindOfPain"
-                    android:layout_weight="1.5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.5"
                     android:drawablePadding="16dp"
                     android:gravity="center|end"
                     android:hint="@string/choose"
@@ -73,17 +73,17 @@
                     android:layout_weight="1"
                     android:gravity="center|start"
                     android:text="@string/areaH"
-                    android:textSize="15sp"
-                    android:textColor="@color/red"/>
+                    android:textColor="@color/red"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/painArea"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.5"
                     android:drawablePadding="16dp"
                     android:gravity="center|end"
                     android:hint="@string/choose"
-                    android:layout_weight="1.5"
                     android:padding="12dp"
                     tools:ignore="MissingConstraints" />
             </TableRow>
@@ -100,8 +100,8 @@
                     android:layout_weight=".3"
                     android:gravity="center|start"
                     android:text="@string/intensityH"
-                    android:textSize="15sp"
-                    android:textColor="@color/red"/>
+                    android:textColor="@color/red"
+                    android:textSize="15sp" />
 
                 <RadioGroup
                     android:id="@+id/intensity"
@@ -116,64 +116,64 @@
 
                         <RadioButton
                             android:id="@+id/intensity1"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginEnd="15dp"
-                            android:text="@null"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1"
                             android:button="@drawable/ic_happy"
                             android:buttonTint="@color/intensity1"
                             android:checked="false"
-                            android:onClick="onRadioButtonClicked"/>
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="@null" />
 
                         <RadioButton
                             android:id="@+id/intensity2"
-                            android:layout_weight="1"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:layout_marginEnd="15dp"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1"
                             android:button="@drawable/ic_ok"
                             android:buttonTint="@color/intensity2"
-                            android:onClick="onRadioButtonClicked"/>
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:onClick="onRadioButtonClicked" />
 
                         <RadioButton
                             android:id="@+id/intensity3"
-                            android:layout_weight="1"
                             android:layout_width="0dp"
-                            android:layout_marginEnd="15dp"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="15dp"
+                            android:layout_weight="1"
                             android:button="@drawable/ic_mid"
+                            android:buttonTint="@color/intensity3"
                             android:minWidth="0dp"
                             android:minHeight="0dp"
-                            android:buttonTint="@color/intensity3"
-                            android:onClick="onRadioButtonClicked"/>
+                            android:onClick="onRadioButtonClicked" />
 
                         <RadioButton
                             android:id="@+id/intensity4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginEnd="15dp"
                             android:layout_weight="1"
-                            android:layout_width="0dp"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
-                            android:layout_height="wrap_content"
                             android:button="@drawable/ic_bad"
                             android:buttonTint="@color/intensity4"
-                            android:onClick="onRadioButtonClicked"/>
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:onClick="onRadioButtonClicked" />
 
                         <RadioButton
                             android:id="@+id/intensity5"
-                            android:layout_weight="1"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:minWidth="0dp"
-                            android:minHeight="0dp"
+                            android:layout_weight="1"
                             android:button="@drawable/ic_worst"
                             android:buttonTint="@color/intensity5"
-                            android:onClick="onRadioButtonClicked"/>
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
+                            android:onClick="onRadioButtonClicked" />
                     </LinearLayout>
 
                 </RadioGroup>
@@ -189,8 +189,8 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/start"
                     android:gravity="center|start"
+                    android:text="@string/start"
                     android:textSize="15sp" />
 
                 <Button
@@ -198,8 +198,8 @@
                     style="?android:spinnerStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:layout_weight="1.5"
+                    android:gravity="center"
                     android:onClick="openTimePickerFrom"
                     android:text="@string/_01_00"
                     android:textColor="@color/black"
@@ -216,8 +216,8 @@
                     android:id="@+id/tvTimePickerButtonTo"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center|start"
                     android:layout_weight="1"
+                    android:gravity="center|start"
                     android:text="@string/end"
                     android:textSize="15sp" />
 
@@ -226,8 +226,8 @@
                     style="?android:spinnerStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:gravity="center"
                     android:layout_weight="1.5"
+                    android:gravity="center"
                     android:onClick="openTimePickerTo"
                     android:text="@string/_01_00"
                     android:textColor="@color/black"
@@ -254,10 +254,10 @@
                     style="?android:spinnerStyle"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.5"
                     android:gravity="center"
                     android:onClick="openDatePicker"
                     android:text="@string/jan_01_2022"
-                    android:layout_weight="1.5"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     tools:ignore="TouchTargetSizeCheck" />
@@ -286,9 +286,8 @@
                     android:ems="10"
                     android:gravity="center|end"
                     android:hint="@string/medics"
-                    android:inputType="textMultiLine"
                     android:minHeight="35dp"
-                    tools:ignore="MissingConstraints"/>
+                    tools:ignore="MissingConstraints" />
             </TableRow>
 
             <TableRow
@@ -309,9 +308,9 @@
                     android:id="@+id/symptoms"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.5"
                     android:drawablePadding="16dp"
                     android:gravity="center|end"
-                    android:layout_weight="1.5"
                     android:hint="@string/choose"
                     android:padding="12dp"
                     tools:ignore="MissingConstraints" />
@@ -335,9 +334,9 @@
                     android:id="@+id/comment"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1.5"
                     android:ems="10"
                     android:gravity="center|end"
-                    android:layout_weight="1.5"
                     android:hint="@string/comment_Hint"
                     android:inputType="textMultiLine"
                     android:minHeight="35dp" />

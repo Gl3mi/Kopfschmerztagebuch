@@ -13,49 +13,6 @@
     <string name="tension">Spannungs-\nKopfschmerzen</string>
     <string name="cluster">Cluster-\nKopfschmerzen</string>
     <string name="sinus">Sinusitis-\nKopfschmerzen</string>
-    <string name="migraine_text">Migräne ist eine Art der Kopfschmerzen die nicht so häufig wie Spannungskopfschmerzen auftritt. Hierbei haben Frauen, oft aufgrund der Menstruation, häufiger Migräne als Männer. Man ist durch sie sehr oft stärker eingeschränkt als bei Spannungskopfschmerzen, da eine Migräne deutlich stärker ist.
-        Die Schmerzen sind hierbei oft auf einer Seite des Kopfes und geben ein pulsierendes, pochendes oder hämmerndes Gefühl ab. Oft steht Migräne mit Übelkeit und schwindelerregenden Gefühlen in Verbindung.
-        Bevor die eigentliche Migräne einsetzt, nehmen manche Menschen eine sogenannte “Aura” wahr. Dieser Begriff beschreibt eine leicht verschwommene oder verwackelte Sicht oder Lichtblitze oder eigenartige Formen. Diese verschwindet innerhalb einer Stunde folgenlos wieder.
-        Kopfschmerzen werden als Migräne eingestuft, wenn typische Merkmale mehr als fünfmal auftreten.\n\nEine Migräne kann in seltenen Fällen auch chronisch werden. Das ist der Fall, wenn über einen Zeitraum von drei Monaten, an mindestens 15 Tagen pro Monat Beschwerden auftreten.
-        Bei einer Migräne gibt es keine genau bestimmten Ursachen. Eine Theorie besagt, dass sich dabei Blutgefäße im Gehirn entzünden. Es ist auch wichtig, wie das Gehirn Schmerzsignale verarbeitet. Zum Beispiel kann Nervosität oder gewisse Anspannung die Schmerzen verstärken oder dazu führen, dass sie auftreten. Eine Migräne kann aber auch einsetzen wenn der Stress nachlässt.
-        Unregelmäßige Schlaf- und Essenszeiten können die Anfallswahrscheinlichkeit erhöhen.\n\nHilfreich gegen eine Migräne sind feste Gewohnheiten oder Verhaltensweisen um Abweichungen und Unregelmäßigkeit als Auslöser zu vermeiden. Eine Dokumentation für eingenommen Medikamente und Nahrung würde kann auch helfen. So kann man leichter mögliche Auslöser identifizieren und zum Beispiel auf einen dieser, für eine Zeit verzichten
-        Manche Menschen verwenden auch Nahrungsergänzungsmittel pflanzliche Arzneimittel oder Entspannungsverfahren. Bei zu starken Anfällen kann man Medikamente verwenden oder sich einer Behandlung unterziehen. Dabei kann man Techniken lernen wie man mit verschiedene Situationen umgehen kann.
-    </string>
-    <string name="tension_text">Einer der häufigsten vorkommenden Varianten sind Spannungskopfschmerzen.
-        Obwohl sie schwächer als Migräne oder Cluster-Kopfschmerzen sind, sind sie dennoch belastend.
-        Da die Ursache der Schmerzen nicht bekannt ist, gehören sie zu den primären Kopfschmerzen.
-        Ihr Auftreten ist sehr häufig und treten bei jungen Erwachsenen zu ersten Mal auf (bei Frauen öfter).
-        Das Schmerzempfinden ist leicht bis mittelstark und die Dauer kann von wenigen Minuten bis zu einer Woche reichen.\n\nDie Ursachen sind zwar unbekannt, aber ein bestimmter Auslöser kann Stress sein. Einige Erkrankungen wie Depressionen gelten sogar als Risikofaktor.
-        Durch körperliche Tätigkeiten werden die Schmerzen nicht stärker. Begleitsymptome sind auch nicht vorhanden.
-        Spannungskopfschmerzen gelten meist als dumpf und drückend empfindend. Der Kopf schmerzt und vor allem der Stirnbereich ist betroffen. Als hätte man einen zu engen Hut, der drückt.\n\nLeichter Ausdauersport und Entspannungsübungen helfen dabei, dass die Schmerzen nicht so häufig auftreten.
-        Pfefferminzöl auf Stirn, Schläfen oder Nacken tupfen hilft auch bei manchen Menschen. Rezeptfreie Medikamente in Apotheken stehen auch zur Auswahl.
-        Jedoch ist wichtig, dass nicht zu viel eingenommen wird, sonst kommen die Schmerzen noch häufiger vor.
-    </string>
-    <string name="cluster_text">Cluster-Kopfschmerzen sind durch die häufigen Attacken mit heftigen, immer einseitigen Kopfschmerzen bekannt. Die Schmerzen befinden sich meistens im Bereich des Auges oder der Schläfe. Begleitsymptome wie Augentränen oder eine laufende Nase sind charakteristisch.
-        Man spricht von dieser Art, weil sich die Beschwerden in einer Bestimmten Zeit häufen. Die Ursache des Auftretens ist unbekannt und deswegen zählen sie auch zu den primären Kopfschmerzen.
-        Im Vergleich zu anderen Kopfschmerzarten kommen Cluster-Kopfschmerzen sehr selten vor, da von 1000 Menschen nur ca. einer betroffen ist (Männer dreimal häufiger).
-        Während einer Attacke ist es sehr schwer sich auf andere Dinge zu konzentrieren, Alltagstätigkeiten durchzuführen oder am Straßenverkehr teilzunehmen. Die Attacken kommen häufig in der Nacht vor und sind Schlaf störend.\n\nMan vermutet, dass Nervenzellen in bestimmten Bereichen des Gehirns “überaktiv” sind, da keine genaue Ursache bekannt ist. Auslöser für Cluster-Kopfschmerzen könnten Alkohol, große Höhen oder nitroglyzerinhaltige Medikamente sein. Jedoch lösen diese nur aus, wenn eine Phase der Erkrankung besteht.
-        Zu den Symptomen gehören sehr starke bohrende, stechende oder brennende Schmerzen im Bereich eines Auges. Als würde ein Nagel durch das Auge stechen. Neben den geröteten und tränenden Auge können auch verkleinerte Pupillen, verstopfte oder laufende Nase, Schweiß oder Überempfindlichkeit gegen Geräusche und Licht als Begleitsymptome auftreten.
-        Die Schmerzen werden durch Bewegung schwächer und nach 15 Minuten bis drei Stunden sind sie verschwunden.\n\nEin Weg Cluster-Kopfschmerzen zu vermeiden, wären die Auslöser zu verhindern.
-        Andere Möglichkeiten wären reinen Sauerstoff einzuatmen. Dazu muss eine Atemmaske, die Mund und Nase bedeckt, verwendet werden.
-        Schmerzmittel sind nicht so schmerzlindernd. Eine Therapie kann hier sehr weiterhelfen.
-    </string>
-    <string name="sinus_text">Sinus-Kopfschmerzen stehen häufig in Verbindung mit einer Erkältung oder höherem Fiber. Man fühlt dabei Druck um die Augen, im Oberkiefer und im Stirnbereich. Begleitend hat man Halsschmerzen, Husten, Abgeschlagenheit und durch Vorbeugen des Kopfes fühlt man, dass die Schmerzen stärker werden.
-        Diese Art eines Kopfschmerzes stammt vom “Sinusitis-Kopfschmerz”, der Entzündungen in der Nase und deren Nebenhöhlen beschreibt, die für Kopfschmerzen verantwortlich sind.
-        Man verwechselt diese Art oft mit der Migräne oder den Spannungskopfschmerzen verwechselt.\n\nFolgende Symptome beschreiben wann es sich um Sinus-Kopfschmerzen handelt\n
-            - Frontaler Kopfschmerz in einen oder mehreren Regionen des Gesichtes, in Begleitung der Zähne und Ohren\n
-            - Eine Sinusitis wurde klinisch oder laborchemisch Nachgewiesen\n
-            - Der Kopfschmerz und/oder Gesichtsschmerz entwickeln sich zur selben Zeit\n
-            - Eiteransammlungen in der Nasenhöhle\n
-            - Reduktion des Geruchssinns oder Unfähigkeit zu riechen\n
-        Sinusitis wird weltweit pro Jahr über 6 Millionen mal diagnostiziert. Es ist eine Erkrankung mit hoher und ansteigender Häufigkeit. Häufig tritt eine Bronchitis auf und umgekehrt genauso.
-        Eine Sinusitis kann durch Infekte, Allergien, einer reduzierten Immunabwehr oder bei strukturellen Veränderungen der Nasenhöhle auftreten. Die Kopfschmerzen selbst können durch Entzündungen und Veränderungen der Druckverhältnisse in der Nase erfolgen. Sollte eine chronische Sinusitis vorliegen, so kann die Möglichkeit bestehen, dass Kopf- und Gesichtsschmerzen nicht auftreten. Wenn es sich um einen akuten Ausbruch einer Sinusitis handelt, sind diese Schmerzen garantiert.
-        Die Wahrscheinlichkeit für eine Sinusitis ist bei Patienten mit Erkrankungen wie Asthma oder Allergien (besonders Hausstaub und Pollen) deutlich höher.\n\nBei einer bakteriellen Form können Antibiotika vom Arzt verschrieben werden. Zusätzlich können Nasenspray oder Tabletten erschrieben werden, wenn die Schmerzen durch Allergien verursacht wurden.
-        Um das allgemeine Risiko für eine Sinusitis zu mindern helfen\n
-            - Häufiges Händewaschen kann helfen Infekte in den Nasennebenhöhlen zu vermeiden\n
-            - Eine jährliche Grippeschutzimpfung kann eine Grippeinfektion vermeiden\n
-            - Reizungen der Nasennebenhöhlen vermeiden. Nicht selbst Rauchen und nicht Passivrauchen. Frische Luft und häufiges Lüften sind wichtig. Unreine Luft führt zu Schwellungen und kann zu Entzündungen führen.
-        </string>
     <string name="links">https://www.dmkg.de/startseite \n https://schmerzklinik.de/2914/ \n https://www.gesundheitsinformation.de/ \n https://www.oeksg.at/</string>
     <string name="type">Schmerzart</string>
     <string name="area">Schmerzbereich</string>
@@ -82,13 +39,6 @@
     <string name="average_duration">Durchschn. Dauer</string>
     <string name="most_area">Häufigster Bereich</string>
     <string name="legend">LEGENDE</string>
-    <string name="legend_text">KALENDER \nKlick auf das Datum und eine Mini-Zusammenfassung
-        erscheint, wenn Datum Eintrag besitzt \n \nHINZUFÜGEN-LISTE \nEintrag kann durch das Plus
-        hinzugefügt werden oder durch nach links
-        Wischen gelöscht werden \nGefüllte Pille —> Medikamente wurden eingenommen \nLeere Pille —>
-        keine eingenommenen Medikamente \n \nHINZUFÜGEN-EINTRAG \nRot markierte
-        Plfichtfelder \nIntensität der Schmerzen: \n Hellgrün —> Sehr leicht \n Grün —>
-        Leicht \n Orange —> Mittel \n Rot —> Stark \n Dunkelrot —> Sehr stark</string>
     <string name="analysis">Monatliche Analyse</string>
     <string name="painless">Hurra, du bist schon seit %d Tag(en) schmerzlos!</string>
     <string name="legend_html">
@@ -151,23 +101,46 @@
         <body>
             <div>
                 <h2>INFO</h2>
-                <p>Migräne ist eine Art der Kopfschmerzen die nicht so häufig wie Spannungskopfschmerzen auftritt. Hierbei haben Frauen, oft aufgrund der Menstruation, häufiger Migräne als Männer. Man ist durch sie sehr oft stärker eingeschränkt als bei Spannungskopfschmerzen, da eine Migräne deutlich stärker ist.
-                    Die Schmerzen sind hierbei oft auf einer Seite des Kopfes und geben ein pulsierendes, pochendes oder hämmerndes Gefühl ab. Oft steht Migräne mit Übelkeit und schwindelerregenden Gefühlen in Verbindung.
-                    Bevor die eigentliche Migräne einsetzt, nehmen manche Menschen eine sogenannte “Aura” wahr. Dieser Begriff beschreibt eine leicht verschwommene oder verwackelte Sicht oder Lichtblitze oder eigenartige Formen. Diese verschwindet innerhalb einer Stunde folgenlos wieder.
-                    Kopfschmerzen werden als Migräne eingestuft, wenn typische Merkmale mehr als fünfmal auftreten.
+                <p>
+                    Migräne ist eine Art der Kopfschmerzen die nicht so häufig wie
+                    Spannungskopfschmerzen auftritt. Hierbei haben Frauen, oft aufgrund der
+                    Menstruation, häufiger Migräne als Männer. Man ist durch sie sehr oft stärker
+                    eingeschränkt als bei Spannungskopfschmerzen, da eine Migräne deutlich stärker ist.
+                    Die Schmerzen sind hierbei oft auf einer Seite des Kopfes und geben ein
+                    pulsierendes, pochendes oder hämmerndes Gefühl ab. Oft steht Migräne mit
+                    Übelkeit und schwindelerregenden Gefühlen in Verbindung.
+                    Bevor die eigentliche Migräne einsetzt, nehmen manche Menschen eine sogenannte
+                    “Aura” wahr. Dieser Begriff beschreibt eine leicht verschwommene oder
+                    verwackelte Sicht oder Lichtblitze oder eigenartige Formen. Diese verschwindet
+                    innerhalb einer Stunde folgenlos wieder.
+                    Kopfschmerzen werden als Migräne eingestuft, wenn typische Merkmale mehr als
+                    fünfmal auftreten.
                 </p>
                 <br>
                 <h2>URSACHEN/HINWEISE</h2>
                 <p>
-                    Eine Migräne kann in seltenen Fällen auch chronisch werden. Das ist der Fall, wenn über einen Zeitraum von drei Monaten, an mindestens 15 Tagen pro Monat Beschwerden auftreten.
-                    Bei einer Migräne gibt es keine genau bestimmten Ursachen. Eine Theorie besagt, dass sich dabei Blutgefäße im Gehirn entzünden. Es ist auch wichtig, wie das Gehirn Schmerzsignale verarbeitet. Zum Beispiel kann Nervosität oder gewisse Anspannung die Schmerzen verstärken oder dazu führen, dass sie auftreten. Eine Migräne kann aber auch einsetzen wenn der Stress nachlässt.
-                    Unregelmäßige Schlaf- und Essenszeiten können die Anfallswahrscheinlichkeit erhöhen.
+                    Eine Migräne kann in seltenen Fällen auch chronisch werden. Das ist der Fall,
+                    wenn über einen Zeitraum von drei Monaten, an mindestens 15 Tagen pro Monat
+                    Beschwerden auftreten. Bei einer Migräne gibt es keine genau bestimmten
+                    Ursachen. Eine Theorie besagt, dass sich dabei Blutgefäße im Gehirn entzünden.
+                    Es ist auch wichtig, wie das Gehirn Schmerzsignale verarbeitet. Zum Beispiel
+                    kann Nervosität oder gewisse Anspannung die Schmerzen verstärken oder dazu
+                    führen, dass sie auftreten. Eine Migräne kann aber auch einsetzen, wenn der
+                    Stress nachlässt. Unregelmäßige Schlaf- und Essenszeiten können die
+                    Anfallswahrscheinlichkeit erhöhen.
                 </p>
                 <br>
                 <h2>LÖSUNGEN</h2>
                 <p>
-                    Hilfreich gegen eine Migräne sind feste Gewohnheiten oder Verhaltensweisen um Abweichungen und Unregelmäßigkeit als Auslöser zu vermeiden. Eine Dokumentation für eingenommen Medikamente und Nahrung würde kann auch helfen. So kann man leichter mögliche Auslöser identifizieren und zum Beispiel auf einen dieser, für eine Zeit verzichten
-                    Manche Menschen verwenden auch Nahrungsergänzungsmittel pflanzliche Arzneimittel oder Entspannungsverfahren. Bei zu starken Anfällen kann man Medikamente verwenden oder sich einer Behandlung unterziehen. Dabei kann man Techniken lernen wie man mit verschiedene Situationen umgehen kann.
+                    Hilfreich gegen eine Migräne sind feste Gewohnheiten oder Verhaltensweisen um
+                    Abweichungen und Unregelmäßigkeit als Auslöser zu vermeiden. Eine Dokumentation
+                    für eingenommen Medikamente und Nahrung würde kann auch helfen. So kann man
+                    leichter mögliche Auslöser identifizieren und zum Beispiel auf einen dieser,
+                    für eine Zeit verzichten. Manche Menschen verwenden auch
+                    Nahrungsergänzungsmittel pflanzliche Arzneimittel oder Entspannungsverfahren.
+                    Bei zu starken Anfällen kann man Medikamente verwenden oder sich einer
+                    Behandlung unterziehen. Dabei kann man Techniken lernen wie man mit
+                    verschiedene Situationen umgehen kann.
                 </p>
             </div>
         </body>
@@ -197,16 +170,23 @@
                 <br>
                 <h2>URSACHEN/HINWEISE</h2>
                 <p>
-                    Die Ursachen sind zwar unbekannt, aber ein bestimmter Auslöser kann Stress sein. Einige Erkrankungen wie Depressionen gelten sogar als Risikofaktor.
-                    Durch körperliche Tätigkeiten werden die Schmerzen nicht stärker. Begleitsymptome sind auch nicht vorhanden.
-                    Spannungskopfschmerzen gelten meist als dumpf und drückend empfindend. Der Kopf schmerzt und vor allem der Stirnbereich ist betroffen. Als hätte man einen zu engen Hut, der drückt.
+                    Die Ursachen sind zwar unbekannt, aber ein bestimmter Auslöser kann Stress sein.
+                    Einige Erkrankungen wie Depressionen gelten sogar als Risikofaktor.
+                    Durch körperliche Tätigkeiten werden die Schmerzen nicht stärker.
+                    Begleitsymptome sind auch nicht vorhanden.
+                    Spannungskopfschmerzen gelten meist als dumpf und drückend empfindend.
+                    Der Kopf schmerzt und vor allem der Stirnbereich ist betroffen. Als hätte man
+                    einen zu engen Hut, der drückt.
                 </p>
                 <br>
                 <h2>LÖSUNGEN</h2>
                 <p>
-                    Leichter Ausdauersport und Entspannungsübungen helfen dabei, dass die Schmerzen nicht so häufig auftreten.
-                    Pfefferminzöl auf Stirn, Schläfen oder Nacken tupfen hilft auch bei manchen Menschen. Rezeptfreie Medikamente in Apotheken stehen auch zur Auswahl.
-                    Jedoch ist wichtig, dass nicht zu viel eingenommen wird, sonst kommen die Schmerzen noch häufiger vor.
+                    Leichter Ausdauersport und Entspannungsübungen helfen dabei, dass die Schmerzen
+                    nicht so häufig auftreten.
+                    Pfefferminzöl auf Stirn, Schläfen oder Nacken tupfen hilft auch bei manchen
+                    Menschen. Rezeptfreie Medikamente in Apotheken stehen auch zur Auswahl.
+                    Jedoch ist wichtig, dass nicht zu viel eingenommen wird, sonst kommen die
+                    Schmerzen noch häufiger vor.
                 </p>
             </div>
         </body>
@@ -225,23 +205,43 @@
         <body>
             <div>
                 <h2>INFO</h2>
-                <p>Cluster-Kopfschmerzen sind durch die häufigen Attacken mit heftigen, immer einseitigen Kopfschmerzen bekannt. Die Schmerzen befinden sich meistens im Bereich des Auges oder der Schläfe. Begleitsymptome wie Augentränen oder eine laufende Nase sind charakteristisch.
-                    Man spricht von dieser Art, weil sich die Beschwerden in einer Bestimmten Zeit häufen. Die Ursache des Auftretens ist unbekannt und deswegen zählen sie auch zu den primären Kopfschmerzen.
-                    Im Vergleich zu anderen Kopfschmerzarten kommen Cluster-Kopfschmerzen sehr selten vor, da von 1000 Menschen nur ca. einer betroffen ist (Männer dreimal häufiger).
-                    Während einer Attacke ist es sehr schwer sich auf andere Dinge zu konzentrieren, Alltagstätigkeiten durchzuführen oder am Straßenverkehr teilzunehmen. Die Attacken kommen häufig in der Nacht vor und sind Schlaf störend.
+                <p>
+                    Cluster-Kopfschmerzen sind durch die häufigen Attacken mit heftigen,
+                    immer einseitigen Kopfschmerzen bekannt. Die Schmerzen befinden sich meistens
+                    im Bereich des Auges oder der Schläfe. Begleitsymptome wie Augentränen oder
+                    eine laufende Nase sind charakteristisch.
+                    Man spricht von dieser Art, weil sich die Beschwerden in einer Bestimmten Zeit
+                    häufen. Die Ursache des Auftretens ist unbekannt und deswegen zählen sie auch
+                    zu den primären Kopfschmerzen.
+                    Im Vergleich zu anderen Kopfschmerzarten kommen Cluster-Kopfschmerzen sehr
+                    selten vor, da von 1000 Menschen nur ca. einer betroffen ist
+                    (Männer dreimal häufiger).
+                    Während einer Attacke ist es sehr schwer sich auf andere Dinge zu konzentrieren,
+                    Alltagstätigkeiten durchzuführen oder am Straßenverkehr teilzunehmen.
+                    Die Attacken kommen häufig in der Nacht vor und sind Schlaf störend.
                 </p>
                 <br>
                 <h2>URSACHEN/HINWEISE</h2>
                 <p>
-                    Man vermutet, dass Nervenzellen in bestimmten Bereichen des Gehirns “überaktiv” sind, da keine genaue Ursache bekannt ist. Auslöser für Cluster-Kopfschmerzen könnten Alkohol, große Höhen oder nitroglyzerinhaltige Medikamente sein. Jedoch lösen diese nur aus, wenn eine Phase der Erkrankung besteht.
-                    Zu den Symptomen gehören sehr starke bohrende, stechende oder brennende Schmerzen im Bereich eines Auges. Als würde ein Nagel durch das Auge stechen. Neben den geröteten und tränenden Auge können auch verkleinerte Pupillen, verstopfte oder laufende Nase, Schweiß oder Überempfindlichkeit gegen Geräusche und Licht als Begleitsymptome auftreten.
-                    Die Schmerzen werden durch Bewegung schwächer und nach 15 Minuten bis drei Stunden sind sie verschwunden.
+                    Man vermutet, dass Nervenzellen in bestimmten Bereichen des Gehirns “überaktiv”
+                    sind, da keine genaue Ursache bekannt ist. Auslöser für Cluster-Kopfschmerzen
+                    könnten Alkohol, große Höhen oder nitroglyzerinhaltige Medikamente sein. Jedoch
+                    lösen diese nur aus, wenn eine Phase der Erkrankung besteht.
+                    Zu den Symptomen gehören sehr starke bohrende, stechende oder brennende
+                    Schmerzen im Bereich eines Auges. Als würde ein Nagel durch das Auge stechen.
+                    Neben dem geröteten und tränenden Auge können auch verkleinerte Pupillen,
+                    verstopfte oder laufende Nase, Schweiß oder Überempfindlichkeit gegen Geräusche
+                    und Licht als Begleitsymptome auftreten.
+                    Die Schmerzen werden durch Bewegung schwächer und nach 15 Minuten bis drei
+                    Stunden sind sie verschwunden.
                 </p>
                 <br>
                 <h2>LÖSUNGEN</h2>
                 <p>
                     Ein Weg Cluster-Kopfschmerzen zu vermeiden, wären die Auslöser zu verhindern.
-                    Andere Möglichkeiten wären reinen Sauerstoff einzuatmen. Dazu muss eine Atemmaske, die Mund und Nase bedeckt, verwendet werden. Schmerzmittel sind nicht so schmerzlindernd.
+                    Andere Möglichkeiten wären reinen Sauerstoff einzuatmen. Dazu muss eine
+                    Atemmaske, die Mund und Nase bedeckt, verwendet werden. Schmerzmittel sind
+                    nicht so schmerzlindernd.
                     Eine Therapie kann hier sehr weiterhelfen.
                 </p>
             </div>
@@ -261,38 +261,58 @@
         <body>
             <div>
                 <h2>INFO</h2>
-                <p>Sinus-Kopfschmerzen stehen häufig in Verbindung mit einer Erkältung oder höherem Fiber. Man fühlt dabei Druck um die Augen, im Oberkiefer und im Stirnbereich. Begleitend hat man Halschmerzen, Husten, Abgeschlagenheit und durch Vorbeugen des Kopfes fühlt man, dass die Schmerzen stärker werden.
-                    Diese Art eines Kopfschmerzes stammt vom “Sinusitis-Kopfschmerz”, der Entzündungen inder Nase und deren Nebenhöhlen beschreibt, die für Kopfschmerzen veratwortlich sind.
-                    Man verwechselt diese Art oft mit der Migräne oder den Spannungskopfschmerzen verwchselt.
+                <p>
+                    Sinus-Kopfschmerzen stehen häufig in Verbindung mit einer Erkältung oder
+                    höherem Fieber. Man fühlt dabei Druck um die Augen, im Oberkiefer und im
+                    Stirnbereich. Begleitend hat man Halsschmerzen, Husten, Abgeschlagenheit und
+                    durch Vorbeugen des Kopfes fühlt man, dass die Schmerzen stärker werden.
+                    Diese Art eines Kopfschmerzes stammt vom “Sinusitis-Kopfschmerz”, der
+                    Entzündungen in der Nase und deren Nebenhöhlen beschreibt, die für
+                    Kopfschmerzen verantwortlich sind.
+                    Man verwechselt diese Art oft mit der Migräne oder den Spannungskopfschmerzen
+                    verwechselt.
                 </p>
                 <br>
                 <h2>URSACHEN/HINWEISE</h2>
                 <p>
                     Folgende Symptome beschreiben wann es sich um Sinus-Kopfschmerzen handelt
                     <ul>
-                        <li>Frontaler Kopfschmerz in einen oder mehreren Regionen des Gesichtes, in Begleitung der Zähne und Ohren</li>
+                        <li>Frontaler Kopfschmerz in einen oder mehreren Regionen des Gesichtes, in
+                        Begleitung der Zähne und Ohren</li>
                         <li>Eine Sinusitis wurde klinisch oder laborchemisch Nachgewiesen</li>
                         <li>Der Kopfschmerz und/oder Gesichtsschmerz entwickeln sich zur selben Zeit</li>
                         <li>Eiteransammlungen in der Nasenhöhle</li>
                         <li>Reduktion des Geruchssinns oder Unfähigkeit zu riechen</li>
                     </ul>
 
-                    Sinusitis wird weltweit pro Jahr über 6 Millionen mal diagnostiziert. Es ist ein Erkrankung mit hoher und ansteigender Häufigkeit. Häufig tritt eine Bronchitis auf und umgekehrt genauso.
+                    Sinusitis wird weltweit pro Jahr über 6 Millionen mal diagnostiziert. Es ist
+                    eine Erkrankung mit hoher und ansteigender Häufigkeit. Häufig tritt eine
+                    Bronchitis auf und umgekehrt genauso.
 
-                    Eine Sinusitis kann durch Infekte, Allergien, einer reduzierten Immunabwehr oder bei strukturellen Veränderungen der Nasenhöhle auftreten.
-                    Die Kopfschmerzen selbst können dirch Entzündungen und Veränderungen der Druckverhältnisse in der Nase erfolgen. Sollte eine chronische Sinusitis vorliegen, so kann die Möglichkeit bestehen, dass Kopf- und Gesichtsschmerzen nicht auftreten. Wenn es sich um einen akuten Ausbruch einer Sinusitis handelt, sind diese Schmerzen garantiert.
-                    Die Wahrscheinlichkeit für eine Sinusitis ist bei Patienten mit Erkrankungen wie Asthma oder Allergien (besonders Hausstaub und Pollen) deutlich höher.
+                    Eine Sinusitis kann durch Infekte, Allergien, einer reduzierten Immunabwehr
+                    oder bei strukturellen Veränderungen der Nasenhöhle auftreten.
+                    Die Kopfschmerzen selbst können durch Entzündungen und Veränderungen der
+                    Druckverhältnisse in der Nase erfolgen. Sollte eine chronische Sinusitis
+                    vorliegen, so kann die Möglichkeit bestehen, dass Kopf- und Gesichtsschmerzen
+                    nicht auftreten. Wenn es sich um einen akuten Ausbruch einer Sinusitis handelt,
+                    sind diese Schmerzen garantiert.
+                    Die Wahrscheinlichkeit für eine Sinusitis ist bei Patienten mit Erkrankungen
+                    wie Asthma oder Allergien (besonders Hausstaub und Pollen) deutlich höher.
                 </p>
                 <br>
                 <h2>LÖSUNGEN</h2>
                 <p>
-                    Bei einer bakteriellen Form können Antibiotika vom Arzt verschrieben werden. Zusätzzlich können Nasenspray oder Tabletten erschrieben werden wenn die Schmerzen durch Allergien verursacht wurden.
+                    Bei einer bakteriellen Form können Antibiotika vom Arzt verschrieben werden.
+                    Zusätzlich können Nasenspray oder Tabletten erschrieben werden, wenn die
+                    Schmerzen durch Allergien verursacht wurden.
 
                     Um das allgemeine Risiko für eine Sinusitis zu mindern helfen
                     <ul>
                         <li>Häufiges Händewaschen kann helfen Infekte in den Nasennebenhöhlen zu vermeiden</li>
-                        <li>Eine jährliche Grippeschuzimpfung kann eine Grippeinfektion vermeiden</li>
-                        <li>Reizungen der Nasennebenhöhlen vermeiden. Nicht selbst rauchen und nicht passivrauchen. Frische Luft und häufiges Lüften sind wichtig. Unreine Luft führt zu Schwellungen und kann zu Entzündungen führen.</li>
+                        <li>Eine jährliche Grippeschutzimpfung kann eine Grippeinfektion vermeiden</li>
+                        <li>Reizungen der Nasennebenhöhlen vermeiden. Nicht selbst rauchen und
+                        nicht Passivrauchen. Frische Luft und häufiges Lüften sind wichtig.
+                        Unreine Luft führt zu Schwellungen und kann zu Entzündungen führen.</li>
                     </ul>
                 </p>
             </div>

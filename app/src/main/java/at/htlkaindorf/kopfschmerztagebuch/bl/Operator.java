@@ -58,18 +58,26 @@ public class Operator implements View.OnClickListener {
         } else {
             if (check.equals("painArea")) {
                 builder.setTitle("Schmerzbereich");
+                builder.setMultiChoiceItems(items, selectedItems, (dialog, which, isChecked) -> {
+                    if (isChecked) {
+                        langList.add(which);
+                        Collections.sort(langList);
+                        toast.show();
+                    } else {
+                        langList.remove(Integer.valueOf(which));
+                    }
+                });
             } else {
                 builder.setTitle("Beigleitsymptome");
+                builder.setMultiChoiceItems(items, selectedItems, (dialog, which, isChecked) -> {
+                    if (isChecked) {
+                        langList.add(which);
+                        Collections.sort(langList);
+                    } else {
+                        langList.remove(Integer.valueOf(which));
+                    }
+                });
             }
-            builder.setMultiChoiceItems(items, selectedItems, (dialog, which, isChecked) -> {
-                if (isChecked) {
-                    langList.add(which);
-                    Collections.sort(langList);
-                    toast.show();
-                } else {
-                    langList.remove(Integer.valueOf(which));
-                }
-            });
         }
 
         builder.setPositiveButton("Ok", (dialog, which) -> {

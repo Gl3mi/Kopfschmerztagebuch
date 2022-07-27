@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -22,7 +21,6 @@ public class EntryFragment extends Fragment {
     private RecyclerView recyclerView;
     private EntryAdapter adapter;
     private Session session;
-    private RelativeLayout relativeLayout;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -42,10 +40,6 @@ public class EntryFragment extends Fragment {
         ImageButton bt = v.findViewById(R.id.add);
 
         bt.setOnClickListener(view -> {
-            //relativeLayout = v.findViewById(R.id.entry_item);
-
-            //relativeLayout.setBackgroundResource(R.drawable.intensity4);
-
             Intent intent = new Intent(getActivity(), EntryActivity.class);
             startActivity(intent);
         });

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".ui.info.InfoFragment"
-    android:theme="@style/Theme.MaterialComponents.NoActionBar">
+    android:theme="@style/Theme.MaterialComponents.NoActionBar"
+    tools:context=".ui.info.InfoFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="15dp">
 
@@ -43,14 +43,13 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/myrectcal"
+                    android:elevation="@dimen/cardview_default_radius"
                     android:padding="30dp"
-                    android:text="@string/legend_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
                     android:visibility="gone"
-                    tools:ignore="ObsoleteLayoutParam"
-                    android:background="@drawable/myrectcal"
-                    android:elevation="@dimen/cardview_default_radius"/>
+                    tools:ignore="ObsoleteLayoutParam" />
 
                 <Button
                     android:id="@+id/migraine_header"
@@ -62,7 +61,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="50sp"
-                    app:backgroundTint="@color/blue"/>
+                    app:backgroundTint="@color/blue" />
 
                 <TextView
                     android:id="@+id/migraine_tf"
@@ -70,16 +69,15 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/myrectcal"
+                    android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
                     android:padding="30dp"
-                    android:text="@string/migraine_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
                     android:visibility="gone"
-                    tools:ignore="ObsoleteLayoutParam"
-                    android:background="@drawable/myrectcal"
-                    android:elevation="@dimen/cardview_default_radius"/>
+                    tools:ignore="ObsoleteLayoutParam" />
 
                 <Button
                     android:id="@+id/tension_header"
@@ -98,15 +96,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/myrectcal"
+                    android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
                     android:padding="30dp"
-                    android:text="@string/tension_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:visibility="gone"
-                    android:background="@drawable/myrectcal"
-                    android:elevation="@dimen/cardview_default_radius"/>
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/cluster_header"
@@ -125,15 +122,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/myrectcal"
+                    android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
                     android:padding="30dp"
-                    android:text="@string/cluster_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:visibility="gone"
-                    android:background="@drawable/myrectcal"
-                    android:elevation="@dimen/cardview_default_radius"/>
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/sinus_header"
@@ -152,15 +148,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
+                    android:background="@drawable/myrectcal"
+                    android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
                     android:justificationMode="inter_word"
                     android:padding="30dp"
-                    android:text="@string/sinus_text"
                     android:textColor="@color/black"
                     android:textSize="17sp"
-                    android:visibility="gone"
-                    android:background="@drawable/myrectcal"
-                    android:elevation="@dimen/cardview_default_radius"/>
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/moreInfo_header"
@@ -182,6 +177,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="50dp"
                     android:autoLink="web"
+                    android:background="@drawable/myrectcal"
+                    android:elevation="@dimen/cardview_default_radius"
                     android:linksClickable="true"
                     android:text="@string/links"
                     android:textAlignment="center"
@@ -189,9 +186,7 @@
                     android:textColorLink="#008EFF"
                     android:textSize="15sp"
                     android:visibility="gone"
-                    tools:ignore="RtlSymmetry"
-                    android:background="@drawable/myrectcal"
-                    android:elevation="@dimen/cardview_default_radius"/>
+                    tools:ignore="RtlSymmetry" />
             </LinearLayout>
         </ScrollView>
     </RelativeLayout>
