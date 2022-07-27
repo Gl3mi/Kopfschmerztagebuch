@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import at.htlkaindorf.kopfschmerztagebuch.R;
 import at.htlkaindorf.kopfschmerztagebuch.databinding.FragmentInfoBinding;
+
 
 public class InfoFragment extends Fragment {
     private FragmentInfoBinding binding;
@@ -47,30 +49,43 @@ public class InfoFragment extends Fragment {
         Button sinusBtn = binding.sinusHeader;
         Button infoBtn = binding.moreInfoHeader;
 
+        ImageView sinusImg = binding.imgSinus;
+        ImageView tensionImg = binding.imgTension;
+        ImageView clusterImg = binding.imgCluster;
+        ImageView migraineImg = binding.imgMigraine;
+
 
         class Info implements View.OnClickListener {
             private final TextView text;
+            private final ImageView img;
 
-            public Info(TextView text) {
+            public Info(TextView text, ImageView img) {
                 this.text = text;
+                this.img = img;
             }
 
             @Override
             public void onClick(View v) {
-                if (text.getVisibility() != View.VISIBLE) {
-                    text.setVisibility(View.VISIBLE);
-                } else {
-                    text.setVisibility(View.GONE);
+                try {
+                    if (text.getVisibility() != View.VISIBLE) {
+                        text.setVisibility(View.VISIBLE);
+                        img.setVisibility(View.VISIBLE);
+                    } else {
+                        text.setVisibility(View.GONE);
+                        img.setVisibility(View.GONE);
+                    }
+                } catch (NullPointerException n) {
+                    n.printStackTrace();
                 }
             }
         }
 
-        migraineBtn.setOnClickListener(new Info(migraineT));
-        tensionBtn.setOnClickListener(new Info(tensionT));
-        clusterBtn.setOnClickListener(new Info(clusterT));
-        sinusBtn.setOnClickListener(new Info(sinusT));
-        infoBtn.setOnClickListener(new Info(infoT));
-        legendBtn.setOnClickListener(new Info(legendT));
+        migraineBtn.setOnClickListener(new Info(migraineT, migraineImg));
+        tensionBtn.setOnClickListener(new Info(tensionT, tensionImg));
+        clusterBtn.setOnClickListener(new Info(clusterT, clusterImg));
+        sinusBtn.setOnClickListener(new Info(sinusT, sinusImg));
+        infoBtn.setOnClickListener(new Info(infoT, null));
+        legendBtn.setOnClickListener(new Info(legendT, null));
 
         return binding.getRoot();
     }
