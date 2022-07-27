@@ -11,7 +11,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#CFCECE"
+        android:background="@color/white"
         tools:ignore="UselessParent">
 
         <ScrollView
@@ -34,7 +34,7 @@
                     android:text="@string/legend"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="50sp"
+                    android:textSize="40sp"
                     app:backgroundTint="@color/purple_700" />
 
                 <TextView
@@ -60,15 +60,23 @@
                     android:text="@string/migraine"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:textSize="50sp"
+                    android:textSize="40sp"
                     app:backgroundTint="@color/blue" />
+
+                <ImageView
+                    android:id="@+id/img_migraine"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_migraine"
+                    android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/migraine_tf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
                     android:background="@drawable/myrectcal"
                     android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
@@ -91,11 +99,19 @@
                     android:textSize="30sp"
                     app:backgroundTint="@color/blue" />
 
+                <ImageView
+                    android:id="@+id/img_tension"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_tension"
+                    android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/tension_tf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:background="@drawable/myrectcal"
                     android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
@@ -117,11 +133,19 @@
                     android:textSize="30sp"
                     app:backgroundTint="@color/blue" />
 
+                <ImageView
+                    android:id="@+id/img_cluster"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_cluster"
+                    android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/cluster_tf"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     android:background="@drawable/myrectcal"
                     android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
@@ -143,11 +167,19 @@
                     android:textSize="30sp"
                     app:backgroundTint="@color/blue" />
 
+                <ImageView
+                    android:id="@+id/img_sinus"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/ic_sinus"
+                    android:visibility="gone" />
+
                 <TextView
                     android:id="@+id/sinus_tf"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
                     android:background="@drawable/myrectcal"
                     android:elevation="@dimen/cardview_default_radius"
                     android:hyphenationFrequency="none"
@@ -174,10 +206,9 @@
                     android:id="@+id/moreInfo_links"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_marginBottom="50dp"
                     android:autoLink="web"
-                    android:background="@drawable/myrectcal"
                     android:elevation="@dimen/cardview_default_radius"
                     android:linksClickable="true"
                     android:text="@string/links"
