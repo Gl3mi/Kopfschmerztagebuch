@@ -433,13 +433,21 @@
                     android:textAlignment="center"
                     android:textColor="@color/black" />
 
-                <TextView
-                    android:id="@+id/medics"
+                <ScrollView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="20dp"
                     android:layout_weight="2"
-                    android:textAlignment="center"
-                    android:textColor="@color/black" />
+                    android:layout_marginTop="5dp"
+                    android:padding="3dp"
+                    android:textAlignment="center">
+
+                    <TextView
+                        android:id="@+id/medics"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="@color/black" />
+                </ScrollView>
             </TableRow>
 
         </TableLayout>
